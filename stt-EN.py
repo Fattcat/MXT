@@ -1,6 +1,5 @@
 import os
 import subprocess
-import pyautogui
 import time
 from time import sleep
 
@@ -21,7 +20,7 @@ os.system("clear")
 print("-------------------------------------------------------------------------\n")
 sleep(0.3)
 print(f"/////////////////////////// {blue}WELCOME TO{reset} {red}stt.py{reset} ///////////////////////////")
-print(f"///////////////////////////   {green}Version 1.0.0{reset}   ///////////////////////////")
+print(f"///////////////////////////   {green}Version 1.1.0{reset}   ///////////////////////////")
 sleep(0.3)
 print(f"////////////////////////// Created By Fattcat ///////////////////////////\n")
 sleep(0.3)
