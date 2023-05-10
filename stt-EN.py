@@ -6,10 +6,6 @@ import time
 from time import sleep
 import random
 
-#Made by Fattcat with Love and hacking Skill #
-
-list = ("red", "green", "yellow", "blue", "orange")
-
 red = '\033[31m'
 green = '\033[32m'
 yellow = '\033[33m'
@@ -19,6 +15,10 @@ orange = '\033[38;5;208m'
 magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
+
+#Made by Fattcat with Love and hacking Skill #
+
+pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
 print(f'{red}{green}Hello, world!{reset}')
 
@@ -32,6 +32,7 @@ print(f"////////////////////////// Created By Fattcat //////////////////////////
 sleep(0.3)
 print(f"/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ \n")
 sleep(0.3)
+print(random.choice(pozdravy),"(Random Generated)")
 print("-------------------------------------------------------------------------\n")
 sleep(1)
 
@@ -39,12 +40,27 @@ while True:
 
     def LangEN():
         os.system("clear")
-
+        sleep(1)
+        print("+-------------------------+")
+        print(f"| Language mode : {green}English{reset} |")
+        print("+-------------------------+")
+        sleep(2)
+        print(f"{green}Dude, SORRY this is not set{reset}")
+        os.system("clear")
+        sleep(1)
         # TREBA DOROBIT
 
     def LangSK():
         os.system("clear")
-        
+        sleep(1)
+        print("+-------------------------+")
+        print(f"| Language mode : {green}Slovak{reset} |")
+        print("+-------------------------+")
+        sleep(2)
+        print(f"{green}Kaamo, PREPAC neni to dorobenee{reset}")
+        sleep(1)
+        os.system("clear")
+        sleep(1)
         # TREBA DOROBIT
 
     def Languages():
