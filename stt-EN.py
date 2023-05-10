@@ -1,7 +1,7 @@
 import os
 #import keyboard
 import subprocess
-import pyautogui
+#import pyautogui
 import time
 from time import sleep
 import random
@@ -117,15 +117,15 @@ while True:
         os.system("clear")
         exit()
 
-    def pygui():
-        for i in range(3):
-            sleep(1)
-            pyautogui.rightClick()
-            sleep(1)
-            pyautogui.mouseDown()
-            sleep(1)
-            pyautogui.mouseUp()
-            sleep(1)
+    #def pygui():
+        #for i in range(3):
+            #sleep(1)
+            #pyautogui.rightClick()
+            #sleep(1)
+            #pyautogui.mouseDown()
+            #sleep(1)
+            #pyautogui.mouseUp()
+            #sleep(1)
 
     def iwconfig():
         print("Starting IWCONFIG ...\n")
