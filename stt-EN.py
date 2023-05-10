@@ -44,8 +44,9 @@ while True:
         print("+-------------------------+")
         print(f"| Language mode : {green}English{reset} |")
         print("+-------------------------+")
-        sleep(2)
+        sleep(1)
         print(f"{green}Dude, SORRY this is not set{reset}")
+        sleep(3)
         os.system("clear")
         sleep(1)
         # TREBA DOROBIT
@@ -54,11 +55,11 @@ while True:
         os.system("clear")
         sleep(1)
         print("+-------------------------+")
-        print(f"| Language mode : {green}Slovak{reset} |")
+        print(f"| Language mode : {green}Slovak{reset}  |")
         print("+-------------------------+")
-        sleep(2)
-        print(f"{green}Kaamo, PREPAC neni to dorobenee{reset}")
         sleep(1)
+        print(f"{green}Kaamo, PREPAC neni to dorobenee{reset}")
+        sleep(3)
         os.system("clear")
         sleep(1)
         # TREBA DOROBIT
@@ -77,13 +78,14 @@ while True:
         if c =="1":
             os.system("clear")
             sleep(1)
-            #LangEN()
+            LangEN()
         elif c =="2":
             os.system("clear")
             sleep(1)
-            #LangSK()
+            LangSK()
         elif c =="3":
-            exit
+            BYEBYE()
+            sleep(2)
 
     def Animation():
         subprocess.call(["python", "animation.py"])
