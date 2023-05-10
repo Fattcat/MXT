@@ -1,4 +1,6 @@
-Welcome to M X T
+Welcome to M X T (folder)
+
+Main App : stt.py
 
 Version : 1.0.0
 
