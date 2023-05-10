@@ -1,5 +1,5 @@
 import os
-import keyboard
+#import keyboard
 import subprocess
 import pyautogui
 import time
@@ -164,8 +164,8 @@ while True:
     elif a == "2":
         print(f"{green}Starting ...\n{reset}")
         Animation()
-        if keyboard.is_pressed("ctrl", "c"):
-            print("BB YYY EEE")
+        #if keyboard.is_pressed("ctrl", "c"):
+            #print("BB YYY EEE")
         #subprocess.Popen("am start -n com.android.chrome/com.google.android.apps.chrome.Main", shell=True)
     elif a == "3":
         Languages()
