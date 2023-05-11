@@ -37,7 +37,18 @@ print("-------------------------------------------------------------------------
 sleep(1)
 
 while True:
-
+    def helpCommands():
+        print("'-h' --> help")
+        print("'-e' --> Exit")
+        d = input("Type : ")
+        if d == "-h":
+            print
+        elif d =="-e":
+            print("Exitting ...")
+            sleep(1)
+            BYEBYE()
+        else:
+            break
     def LangEN():
         os.system("clear")
         sleep(1)
