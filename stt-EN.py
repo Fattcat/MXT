@@ -23,32 +23,38 @@ pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 print(f'{red}{green}Hello, world!{reset}')
 
 os.system("clear")
-print("-------------------------------------------------------------------------\n")
+print("+-------------------------------------------------------------------------+\n")
 sleep(0.3)
-print(f"/////////////////////////// {blue}WELCOME TO{reset} {red}stt.py{reset} ///////////////////////////")
-print(f"///////////////////////////   {green}Version 1.0.0{reset}   ///////////////////////////")
+print(f"|/////////////////////////// {blue}WELCOME TO{reset} {red}stt.py{reset} ///////////////////////////|")
+print(f"|///////////////////////////   {green}Version 1.0.0{reset}   ///////////////////////////|")
 sleep(0.3)
-print(f"////////////////////////// Created By Fattcat ///////////////////////////\n")
+print(f"|////////////////////////// Created By Fattcat ///////////////////////////|\n")
 sleep(0.3)
-print(f"/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\ \n")
+print(f"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|\n")
 sleep(0.3)
-print(random.choice(pozdravy),"(Random Generated)")
-print("-------------------------------------------------------------------------\n")
+print("                      ",random.choice(pozdravy),"(Random Generated)\n")
+print("+-------------------------------------------------------------------------+\n")
 sleep(1)
 
 while True:
     def helpCommands():
-        print("'-h' --> help")
-        print("'-e' --> Exit")
+        print(f"'{green}-h{reset}' --> help")
+        print(f"'{red}-e{reset}' --> Exit")
         d = input("Type : ")
         if d == "-h":
+            os.system("clear")
+            sleep(1)
+            print("SOmething here")
             print
+            sleep(1)
+            os.system("clear")
+        
         elif d =="-e":
             print("Exitting ...")
             sleep(1)
             BYEBYE()
         else:
-            break
+            breake
     def LangEN():
         os.system("clear")
         sleep(1)
@@ -98,6 +104,9 @@ while True:
             BYEBYE()
             sleep(2)
 
+    def DalsiSpustac():
+        subprocess.call(["Piskotky.py"])
+        # ESTE TO NENI CELE a ONO
     def Animation():
         subprocess.call(["python", "animation.py"])
 
@@ -160,18 +169,24 @@ while True:
         sleep(0.1)
         os.system("sudo airmon-ng start wlan1")
         sleep(0.1)
+    
+    def WiFiKicker():
+        print(f"{green}Starting{reset} {orange}WiFiKicker{reset}")
+        sleep(1)
+        subprocess.call([WiFiKicker.py])
 
     print(f"{green}[ 1 ]{reset} Start stt.py")
     print(f"{yellow}[ 2 ]{reset} Animation :D")
     print(f"{orange}[ 3 ]{reset} Select Language")
     print(f"{orange}[ 4 ]{reset} RE-INSTALL ALL PACKAGES")
     print(f"{red}[ 5 ]{reset} Exit")
+    print(f"{green}[ -h ]{reset} Help")
 
-    a = input("Select Option : ")
+    a = input(f"{blue}Select Option : {reset}")
 
     if a == "1":
         print("Loading ...")
-        pygui()
+        #pygui()
     elif a == "2":
         print(f"{green}Starting ...\n{reset}")
         Animation()
@@ -188,12 +203,14 @@ while True:
         os.system("clear")
         sleep(0.3)
         BYEBYE()
+    elif a =="-h":
+        helpCommands()
     else:
-        b = input("Press Y to restart stt.py OR Press N for exit : ")
-        if b =="Y" or b =="y":
+        b = input(f"Press {green}Y{reset} to restart stt.py OR Press {red}N{reset} for exit : ")
+        if b =="Y" or b =="y" or b =="yes" or b =="Yes":
             continue
-        elif b =="N" or b =="n":
-            print("bye :D")
+        elif b =="N" or b =="n" or b =="No" or b =="no":
+            print("\n\n                          bye :D\n")
             BYEBYE()
         else:
             print(f"{red}       Wrong Input ! Cancelling ...{reset}")
