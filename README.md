@@ -1,6 +1,6 @@
 Welcome to M X T (folder)
 
-Main App : stt.py
+Main App : stt.py (Not working enought)
 
 Version : 1.0.0
 
