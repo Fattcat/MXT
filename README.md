@@ -1,6 +1,6 @@
 Welcome to M X T (folder)
 
-Main App : stt.py (Not working enought)
+Main App : stt.py (Not working good enought)
 
 Version : 1.0.0
 
@@ -10,7 +10,7 @@ TYPE HELP or -h For show commands to use
 
 ! DON'T ABUSE THIS POWERFULL PYTHON SCRIPT !
 
-! USE THIS ONLY ON YOUR OWN RISK OR IF YOU HABE ALL PERMISSIONS !
+! USE THIS ONLY ON YOUR OWN RISK OR IF YOU HAVE ALL PERMISSIONS !
 
 [ INSTALLATION ]
 
