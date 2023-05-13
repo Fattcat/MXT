@@ -78,11 +78,11 @@ sleep(1)
 while True:
     def StartSound():
         sleep(0.3)
-        os.system("start AuughSound.mp3")
+        playsound("AuughSound.mp3")
         sleep(3)
         print("Wait please ...")
         sleep(3)
-        os.system("start AuughSound.mp3")
+        playsound("start AuughSound.mp3")
         sleep(3)
         print(".")
         sleep(0.3)
