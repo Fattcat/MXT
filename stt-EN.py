@@ -166,6 +166,8 @@ while True:
     def REINSTALL():
         print("INSTALLING ALL PACKAGES ...\nPLEASE WAIT ...\n")
         sleep(1)
+        subprocess.run(["pip","install ","playsound"])
+        sleep(1)
         subprocess.run(["pip", "install", "os"])
         sleep(1)
         subprocess.run(["pip", "install", "pyautogui"])
