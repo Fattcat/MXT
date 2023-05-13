@@ -22,6 +22,27 @@ pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
 print(f'{red}{green}Hello, world!{reset}')
 
+
+os.system("clear")
+print"""                                                                                
+                                                                                
+                                                                                
+                                                                                
+               .^^^^:  ::::::::^..::::::::^.                                    
+             ~PPYJJ5Y :YYY5&GYY5~:YYYP&PYYY^                                    
+             #&.          ^@J        ~@7         :!.:!77~.  ~~     :!.          
+             !GGY7^       ^@J        !@7         7@P?!!7P#~ ?@!   .#P           
+               :7YGG?     ^@J        !@7         !@7     #B  Y@^  GG            
+                   ?@?    ^@J        !@7         !@7    :&P   PB.Y#.            
+            .5Y?77JGG:    ^@J        !@7    .PY  !@GJ7!?GP:    G##:             
+             :~!7!~:      .~:        .~.     !~  !@!:!!!:      J@~              
+                                                 7@!        ~!YB~               
+                                                 :!.        ~7!.                
+                                                                                
+                                                                                
+                                                                                """
+
+
 os.system("clear")
 print("+-------------------------------------------------------------------------+\n")
 sleep(0.3)
