@@ -73,6 +73,9 @@ print("+------------------------------------------------------------------------
 sleep(1)
 
 while True:
+    def StartSound():
+        os.system("start A")
+        
     def helpCommands():
         print(f"'{green}-h{reset}' --> help")
         print(f"'{red}-e{reset}' --> Exit")
@@ -222,6 +225,7 @@ while True:
 
     if a == "1":
         print("Loading ...")
+        StartSound()
         #pygui()
     elif a == "2":
         print(f"{green}Starting ...\n{reset}")
