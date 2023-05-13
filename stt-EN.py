@@ -5,6 +5,7 @@ import subprocess
 import time
 from time import sleep
 import random
+import playsound
 
 red = '\033[31m'
 green = '\033[32m'
