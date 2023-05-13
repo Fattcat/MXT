@@ -3,11 +3,11 @@ from time import sleep
 import subprocess
 
 sleep(1)
-subprosess.run(["pip", "install", "playsound"])
+subprocess.run(["pip", "install", "playsound"])
 sleep(1)
-subprosess.run(["pip", "install", "pyautogui"])
+subprocess.run(["pip", "install", "pyautogui"])
 sleep(1)
-subprosess.run(["pip", "install", "os"])
+subprocess.run(["pip", "install", "os"])
 sleep(1)
-subprosess.run(["pip", "install", "pywifi"])
+subprocess.run(["pip", "install", "pywifi"])
 sleep(1)
