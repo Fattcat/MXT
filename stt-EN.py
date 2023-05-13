@@ -5,7 +5,7 @@ import subprocess
 import time
 from time import sleep
 import random
-from playsound import playsound
+#from playsound import playsound
 #import pywifi
 import pygame
 
