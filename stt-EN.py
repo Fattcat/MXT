@@ -7,6 +7,7 @@ from time import sleep
 import random
 from playsound import playsound
 #import pywifi
+import pygame
 
 red = '\033[31m'
 green = '\033[32m'
@@ -78,11 +79,15 @@ sleep(1)
 while True:
     def StartSound():
         sleep(0.3)
-        playsound("AuughSound.mp3")
+        # FUNGUJE ZATIAL NA WINDOWSE --> playsound("AuughSound.mp3")
+        pygame.mixer.music.load("AuughSound.mp3")
+        pygame.mixer.music.play()
         sleep(3)
         print("Wait please ...")
         sleep(3)
-        playsound("start AuughSound.mp3")
+        #PRE ANDROID JE TENTO ROADOK NIZSIE
+        pygame.mixer.music.load("AuughSound.mp3")
+        pygame.mixer.music.play()
         sleep(3)
         print(".")
         sleep(0.3)
