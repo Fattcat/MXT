@@ -154,6 +154,8 @@ while True:
         elif c =="3":
             BYEBYE()
             sleep(2)
+        else:
+            print("Wrong Input")
 
     def DalsiSpustac():
         subprocess.call(["Piskotky.py"])
