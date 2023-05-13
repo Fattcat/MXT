@@ -74,7 +74,19 @@ sleep(1)
 
 while True:
     def StartSound():
-        os.system("start A")
+        sleep(0.3)
+        os.system("start AuuughSound.mp3")
+        sleep(3)
+        print("Wait please ...")
+        sleep(3)
+        os.system("start AuuughSound.mp3")
+        sleep(3)
+        print(".")
+        sleep(0.3)
+        print("..")
+        sleep(0.3)
+        print("...")
+        sleep(0.3)
         
     def helpCommands():
         print(f"'{green}-h{reset}' --> help")
