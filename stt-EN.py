@@ -6,6 +6,7 @@ import time
 from time import sleep
 import random
 import playsound
+#import pywifi
 
 red = '\033[31m'
 green = '\033[32m'
