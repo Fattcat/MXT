@@ -22,26 +22,40 @@ pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
 print(f'{red}{green}Hello, world!{reset}')
 
-
 os.system("clear")
-printf"""{red}                                                                                
-                                                                                
-                                                                                
-                                                                                
-               .^^^^:  ::::::::^..::::::::^.                                    
-             ~PPYJJ5Y :YYY5&GYY5~:YYYP&PYYY^                                    
-             #&.          ^@J        ~@7         :!.:!77~.  ~~     :!.          
-             !GGY7^       ^@J        !@7         7@P?!!7P#~ ?@!   .#P           
-               :7YGG?     ^@J        !@7         !@7     #B  Y@^  GG            
-                   ?@?    ^@J        !@7         !@7    :&P   PB.Y#.            
-            .5Y?77JGG:    ^@J        !@7    .PY  !@GJ7!?GP:    G##:             
-             :~!7!~:      .~:        .~.     !~  !@!:!!!:      J@~              
-                                                 7@!        ~!YB~               
-                                                 :!.        ~7!.                
-                                                                                
-                                                                                
-                                                                                {reset}"""
 sleep(1)
+print(f"                                                                                ")
+sleep(1)
+print(f"                                                                                ")
+sleep(0.2)
+print(f"                                                                                ")
+sleep(0.2)
+print(f"                                                                                ")
+sleep(0.2)
+print(f"               .^^^^:  ::::::::^..::::::::^.                                    ")
+sleeep(0.2)
+print(f"             ~PPYJJ5Y :YYY5&GYY5~:YYYP&PYYY^                                    ")
+sleep(0.2)
+print(f"             #&.          ^@J        ~@7         :!.:!77~.  ~~     :!.          ")
+sleep(0.2)
+print(f"             !GGY7^       ^@J        !@7         7@P?!!7P#~ ?@!   .#P           ")
+sleep(0.2)
+print(f"               :7YGG?     ^@J        !@7         !@7     #B  Y@^  GG            ")
+sleep(0.2)
+print(f"                   ?@?    ^@J        !@7         !@7    :&P   PB.Y#.            ")
+sleep(0.2)
+print(f"           .5Y?77JGG:    ^@J        !@7    .PY  !@GJ7!?GP:    G##:             ")
+sleep(0.2)
+print(f"             :~!7!~:      .~:        .~.     !~  !@!:!!!:      J@~              ")
+sleep(0.2)
+print(f"                                                 7@!        ~!YB~               ")
+sleep(0.2)
+print(f"                                                :!.        ~7!.                ")
+sleep(0.2)
+print(f"                                                                               ")
+sleep(0.2)
+print("                                                                                ")
+sleep(0.2)
 
 
 os.system("clear")
