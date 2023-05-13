@@ -24,7 +24,7 @@ print(f'{red}{green}Hello, world!{reset}')
 
 
 os.system("clear")
-print"""                                                                                
+print"""{red}                                                                                
                                                                                 
                                                                                 
                                                                                 
@@ -40,7 +40,8 @@ print"""
                                                  :!.        ~7!.                
                                                                                 
                                                                                 
-                                                                                """
+                                                                                {reset}"""
+sleep(1)
 
 
 os.system("clear")
