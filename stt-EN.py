@@ -24,7 +24,7 @@ print(f'{red}{green}Hello, world!{reset}')
 
 
 os.system("clear")
-print"""{red}                                                                                
+printf"""{red}                                                                                
                                                                                 
                                                                                 
                                                                                 
