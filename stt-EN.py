@@ -5,7 +5,7 @@ import subprocess
 import time
 from time import sleep
 import random
-import playsound
+from playsound import playsound
 #import pywifi
 
 red = '\033[31m'
