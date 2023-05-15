@@ -13,7 +13,8 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
-
-RC = random.choice(red, green, yellow, blue, orange, magenta, cyan)
-print("//////////// PisKoTKyY \\\\\\\\\\\\\n")
-print(f"Welcome to Piskotky{reset}")
+def Piskota1():
+  random.choice(red, green, yellow, blue, orange, magenta, cyan)
+  
+print(f"//////////// {red}PisKoTKyY{reset} \\\\\\\\\\\\\n")
+print(f"{green}Welcome to Piskotky{reset}")
