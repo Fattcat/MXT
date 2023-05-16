@@ -15,3 +15,6 @@ subprocess.run(["pip3", "install", "pygame"])
 sleep(1)
 subprocess.run(["pip3", "install", "shutil"])
 sleep(1)
+subprocess.run(["sudo", "apt-get", "install", "wireless-tools"])
+sleep(1)
+
