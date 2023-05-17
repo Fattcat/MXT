@@ -16,4 +16,5 @@ TYPE HELP or -h For show commands to use
 
 1. git clone https://github.com/Fattcat/MXT
 2. cd MXT
-3. python3 stt-EN.py
+3. python3 iner.py
+4. python3 stt-EN.py
