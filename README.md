@@ -1,6 +1,6 @@
-#Welcome to M X T (folder)
+# Welcome to M X T (folder)
 
-#Main App : stt.py Latest Update
+# Main App : stt.py Latest Update
 
 Version : 1.0.0
 
