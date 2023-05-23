@@ -19,6 +19,9 @@ TYPE HELP or -h For show commands to use
 4. python3 stt-EN.py
 
 # [ USING ]
-This Python tool can be sed for 
+This Python tool can be sed for :
 1. Easy Deauth attacks (Automatic)
 2. Capture and Bruteforce attacks : (HandShake, WiFi passwds, Evil Twin Attack ...)
+3. Wireless Back Door Set Up stuff
+4. WiFi Injection (Sniff photos, Credentials, searched or Downloaded)
+5. ...
