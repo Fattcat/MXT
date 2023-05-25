@@ -3,9 +3,11 @@ import subprocess
 from time import sleep
 import pywifi
 from pywifi import const
+import sys
 
 wifi = pywifi.PyWiFi()
 
+# FARBY
 red = '\033[31m'
 green = '\033[32m'
 yellow = '\033[33m'
@@ -16,10 +18,62 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
+def WiFiLOGO():
+    print(f"""{red}                                                    .!:
+                                                     .?B@&Y:     
+                                                  .?#@@@@@&!    
+                                                :J#@@@@@@P~     
+                              ..:::::...      :Y&@@@@@@5^       
+                     :^!?YPGB##&&&&&&&&##P^ ^5&@@@@@&5^         
+               .^!JPB&@@@@@@@@@@@@@@@@@#?.^5@@@@@@&J:           
+           .^?P#@@@@@@@@@@@@&##BBGGGBG7.^P@@@@@@#J.:YB57:       
+        :75#@@@@@@@@@#G5J7~^:.        ~P@@@@@@#?.^P@@@@@@BJ^    
+     :7P&@@@@@@@&GJ!^.        .::   !G@@@@@@B7.  !5B&@@@@@@@BJ^ 
+    :G@@@@@@&GJ~.     .^!J5PB#&P^.7B@@@@@@B!.:.     :75#@@@@@@G:
+     .?B@&P7:     ^7YG&@@@@@@P^.7B@@@@@@G! ~G@&GY!:    .!5&@G~  
+       .!:    .!YB@@@@@@@@@5^.?#@@@@@@G~ !B@@@@@@@&G?:    :^    
+            ~P&@@@@@@@&BP?:.J#@@@@@@P^   ~7JP#@@@@@@@@G!        
+            ~P@@@@@BY!:  .J&@@@@@@5^.!!~:.    ^?P&@@@&Y^        
+              ^5BJ^    ^5&@@@@@&Y:.?#@@@@&B5?^   .7PJ.          
+                     ^5@@@@@@&Y::Y&@@@@@@@@@@@#5!               
+                   ~P@@@@@@#J: :??77?JYPB&@@@@@B7               
+                 ~G@@@@@@#?.      .      :!YBG~                 
+              .7G@@@@@@B?.    ^5B&&#G7                          
+              ^G@@@@@B7.     ~@@@@@@@@5                         
+                ~P@G!        ?@@@@@@@@#                         
+                  :           J&@@@@@G^                         
+                               .~77!^                        {reset}""")
+    print("                                                    ")
+    print("                                                    ")
+    sleep(2)
+    os.system("clear")
+
+#def CheckSUDO():
+#    if os.geteuid() !=0:
+#        print(" ")
+#        print(" ")
+#        print(" ")
+#        print(f"{red}                Cannot continue{reset} {orange}!{reset} \n           Please start it again with {green}sudo{reset}")
+#        print(" ")
+#        print(" ")
+#        print(f"{orange}                    Exitting ...{reset}")
+#        exit()
+#    elif os.geteuid() ==1:
+#        print("Continue ...")
+#        pass
+#CheckSUDO()
+
 def exitting():
     print(" ")
     print(" ")
-    print("Exitting ...")
+    print(" ")
+    print(f"{red}               Exitting ...{reset}")
+    sleep(2)
+    print(" ")
+    print(" ")
+    print(" ")
+    print(" ")
+    print(f"  {green}Thank You{reset} for using Our Script :D")
 
 def MonMODE_wlan1():
         print(f"{orange}Starting{reset} MONITOR MODE on {green}'wlan1'{reset} ...")
@@ -47,6 +101,22 @@ def MonMODE_wlan0():
         sleep(1)
         os.system("clear")
 
+# NASTAVENIE INTERFACE (wlan0 alebo wlan1)
+Interface = input(f"Select WiFi interface ({green}wlan0 or wlan1{reset}) for Scanning WiFi : ")
+if Interface == "wlan0":
+    print(f"{green}Starting{reset}",Interface)
+elif Interface == "wlan":
+    print(f"{green}Starting{reset}",Interface)
+elif Interface == "wlan2":
+    print(f"{green}Starting{reset}",Interface)
+else:
+    breake
+    exit()
+def AirodumpNg():
+    # treba dorobit kod pre kontrolu AK JE URCITE ZAPNUTY MONITOR MOD pre spustenie airodump-ng
+    os.system("airodum-ng start" ,Interface)
+    sleep(1)
+    # ESTE DOPLNIT
 def Start_KickerFi():
     os.system("clear")
     print(" ")
@@ -132,34 +202,8 @@ sleep(0.2)
 print(f"{orange}                      Version :{reset} {green}1.0.0{reset}         {reset}")
 print(" ")
 sleep(1)
-print("""                                                    .!:
-                                                 .?B@&Y:     
-                                              .?#@@@@@&!    
-                                            :J#@@@@@@P~     
-                          ..:::::...      :Y&@@@@@@5^       
-                 :^!?YPGB##&&&&&&&&##P^ ^5&@@@@@&5^         
-           .^!JPB&@@@@@@@@@@@@@@@@@#?.^5@@@@@@&J:           
-       .^?P#@@@@@@@@@@@@&##BBGGGBG7.^P@@@@@@#J.:YB57:       
-    :75#@@@@@@@@@#G5J7~^:.        ~P@@@@@@#?.^P@@@@@@BJ^    
- :7P&@@@@@@@&GJ!^.        .::   !G@@@@@@B7.  !5B&@@@@@@@BJ^ 
-:G@@@@@@&GJ~.     .^!J5PB#&P^.7B@@@@@@B!.:.     :75#@@@@@@G:
- .?B@&P7:     ^7YG&@@@@@@P^.7B@@@@@@G! ~G@&GY!:    .!5&@G~  
-   .!:    .!YB@@@@@@@@@5^.?#@@@@@@G~ !B@@@@@@@&G?:    :^    
-        ~P&@@@@@@@&BP?:.J#@@@@@@P^   ~7JP#@@@@@@@@G!        
-        ~P@@@@@BY!:  .J&@@@@@@5^.!!~:.    ^?P&@@@&Y^        
-          ^5BJ^    ^5&@@@@@&Y:.?#@@@@&B5?^   .7PJ.          
-                 ^5@@@@@@&Y::Y&@@@@@@@@@@@#5!               
-               ~P@@@@@@#J: :??77?JYPB&@@@@@B7               
-             ~G@@@@@@#?.      .      :!YBG~                 
-          .7G@@@@@@B?.    ^5B&&#G7                          
-          ^G@@@@@B7.     ~@@@@@@@@5                         
-            ~P@G!        ?@@@@@@@@#                         
-              :           J&@@@@@G^                         
-                           .~77!^                        """)
-print("                                                    ")
-print("                                                    ")
-sleep(2)
-os.system("clear")
+
+WiFiLOGO()
 
 print(" ")
 print(f"{green}[ 1 ]{reset} {green}START KickerFi{reset} KICK ALL DEVICES on ALL WiFi Routers around 6 to 33 meters")
