@@ -234,18 +234,26 @@ while True:
         os.system("sudo airmon-ng start wlan1")
         sleep(0.1)
     
-    def WiFiKicker():
-        print(f"{green}Starting{reset} {orange}WiFiKicker{reset}")
+    def KickerFi():
+        print(f"{green}Starting{reset} {orange}KickerFi{reset}")
         sleep(1)
-        subprocess.call([WiFiKicker.py])
+        subprocess.call([KickerFi.py])
+
+    def Piskotky():
+        subprocess.call([Piskotky.py])
 
     print(f"{green}[ 1 ]{reset} Start stt.py")
-    print(f"{yellow}[ 2 ]{reset} Animation :D")
-    print(f"{orange}[ 3 ]{reset} Select Language")
-    print(f"{orange}[ 4 ]{reset} RE-INSTALL ALL PACKAGES")
-    print(f"{red}[ 5 ]{reset} Exit")
+    print(f"{green}[ 2 ]{reset} Start KickerFi.py")
+    print(f"{green}[ 3 ]{reset} Start Piskotky.py")
+    print(f"{green}[ 4 ]{reset} Start SomeScript.py")
+    print(f"{green}[ 5 ]{reset} Start SomeScript.py")
+    print(f"{yellow}[ 6 ]{reset} Animation :D")
+    print(f"{orange}[ 7 ]{reset} Select Language")
+    print(f"{orange}[ 8 ]{reset} RE-INSTALL ALL PACKAGES")
+    print(" ")
+    print(f"{red}[ 9 ]{reset} Exit")
     print(f"{green}[ -h ]{reset} Help")
-
+    print(" ")
     a = input(f"{blue}Select Option : {reset}")
 
     if a == "1":
@@ -253,21 +261,39 @@ while True:
         StartSound()
         #pygui()
     elif a == "2":
-        print(f"{green}Starting ...\n{reset}")
-        Animation()
-        #if keyboard.is_pressed("ctrl", "c"):
-            #print("BB YYY EEE")
-        #subprocess.Popen("am start -n com.android.chrome/com.google.android.apps.chrome.Main", shell=True)
+        print(f"{green}Starting ... {blue}KickerFi{reset}\n{reset}")
+        subprocess.call([KickerFi.py])
+
     elif a == "3":
-        Languages()
+        
         print(f'{green}Starting ...\n{reset}')
     elif a == "4":
         print(f'{red}Starting ...\n{reset}')
         REINSTALL()
+
     elif a == "5":
+        
+        print(f'{green}Starting ...\n{reset}')
+    
+    elif a == "6":
+        
+        print(f'{green}Starting ...\n{reset}')
+        Animation()
+    elif a == "7":
+        print(f'{green}Starting ...\n{reset}')
+        sleep(1)
+        Languages()
+
+
+    elif a == "8":
         os.system("clear")
         sleep(0.3)
         BYEBYE()
+    
+    elif a == "9":
+        Languages()
+        print(f'{green}Starting ...\n{reset}')
+
     elif a =="-h":
         helpCommands()
     else:
