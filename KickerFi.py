@@ -12,11 +12,41 @@ red = '\033[31m'
 green = '\033[32m'
 yellow = '\033[33m'
 blue = '\033[34m'
+purple = '\033[34;45m'
 #orange = '\033[033m'
 orange = '\033[38;5;208m'
 magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
+
+def DISCLAIMER():
+    os.system("clear")
+    print(" ")
+    print(" ")
+    print(" ")
+    print(f"                 {yellow}+{reset} ------------------ {yellow}+{reset}")
+    print(f"                 + {red}   DISCLAIMER !{reset}    +")
+    print(f"                 {yellow}+{reset} ------------------ {yellow}+{reset}")
+    print(" ")
+    print(" ")
+    dis = input(f"Do You Really want to Start THIS SCRIPT FOR KICKING ALL USERS from ALL WiFi Routers ? ({green}Yes{reset} / {red}No{reset}) : ")
+    print(" ")
+    print(" ")
+    if dis == "Yes" or dis =="yes":
+        sleep(1)
+        print("Ok, Continuining")
+    elif dis =="No" or dis =="no":
+        sleep(1)
+        print(" eXITING ...")
+        exit()
+    else:
+        print("Invalid Input --> Exitting ...")
+        sleep(2)
+        os.system("clear")
+        sleep(2)
+        exit()
+
+DISCLAIMER()
 
 def WiFiLOGO():
     print(f"""{red}                                                    .!:
@@ -47,6 +77,23 @@ def WiFiLOGO():
     print("                                                    ")
     sleep(2)
     os.system("clear")
+
+def KickerFiLOGO():
+    os.system("clear")
+    sleep(1)
+    print(" ")
+    print(" ")
+    print(f"      -------------------------------------------------")
+    print(f"      {blue}     (\|/--\|/)                   (\|/--\|/)        {reset}")
+    print(f"      ------({green}O{reset}-__-{green}O{reset})                     ({green}O{reset}-__-{green}O{reset})------{reset}")
+    print(f"               {green}/\{reset}                           {green}/\{reset}         ")
+    print(f"              :  :    Welcome to {red}KickerFi{reset}  :  :        ")
+    print(f"      ------({green}O{reset}-__-{green}O{reset})                     ({green}O{reset}-__-{green}O{reset})------{reset}")
+    print(f"      {blue}     (\|/--\|/)  version : 1.0.0  (\|/--\|/)        {reset}")
+    print(f"      -------------------------------------------------")
+    print(" ")
+    print(" ")
+    sleep(2)
 
 #def CheckSUDO():
 #    if os.geteuid() !=0:
@@ -102,42 +149,62 @@ def MonMODE_wlan0():
         os.system("clear")
 
 # NASTAVENIE INTERFACE (wlan0 alebo wlan1)
-Interface = input(f"Select WiFi interface ({green}wlan0 or wlan1{reset}) for Scanning WiFi : ")
-if Interface == "wlan0":
-    print(f"{green}Starting{reset}",Interface)
-elif Interface == "wlan":
-    print(f"{green}Starting{reset}",Interface)
-elif Interface == "wlan2":
-    print(f"{green}Starting{reset}",Interface)
-else:
-    breake
-    exit()
+
+KickerFiLOGO()
+
+sleep(0.1)
+os.system("clear")
+sleep(1)
+print(" ")
+print(" ")
+print(" ")
+Interface = input(f"Select WiFi interface ({green}wlan0{reset} or {green}wlan1{reset}) for Scanning: ")
+print(f"{green}Starting {reset}", Interface)
+sleep(1)
+print(" ")
+print(" ")
+print(" ")
+
 def AirodumpNg():
-    # treba dorobit kod pre kontrolu AK JE URCITE ZAPNUTY MONITOR MOD pre spustenie airodump-ng
+    os.system("clear")
+    sleep(1)
+    print(f"{yellow}Starting{reset} airodump-ng on ", Interface,"WIFi Adapter")
     os.system("airodum-ng start" ,Interface)
     sleep(1)
-    # ESTE DOPLNIT
+
+def AirCrackNg():
+    os.system("clear")
+    sleep(1)
+    print(" ")
+    print(" ")
+    print("")
+    
+
+
 def Start_KickerFi():
     os.system("clear")
     print(" ")
     print(" ")
     print(f"           {yellow}PLUG IN{reset} Your WiFi Adapter")
     print(" ")
-    print(" ")
+    print(" ")   
     sleep(3)
+
     a = input(f"Type {green}Y{reset} for {green}START{reset} or {red}C{reset} for {red}CANCEL{reset} : ")
     if a =="y" or a =="Y":
         MonMODE_wlan1()
         print(" ")
         print(" ")
         print(f"[ 0 ] {green}START nieco co este NENI{reset} ")
-        print(f"[ 1 ] {red}STOP{reset} {orange}MONITOR MODE on 'wlan1'{reset}")
-        print(f"[ 2 ] {red}STOP{reset} {orange}MONITOR MODE on 'wlan0'{reset}")
+        print(f"[ 1 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on " ,Interface)
+        print(f"[ 2 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on " ,Interface)
         print(f"[ 3 ] {red}EXIT{reset}")
         c = input("Option : ")
         if c =="0":
+            sleep(1)
             os.system("clear")
-
+            print("Ahoj :D")
+            breakpoint
         elif c =="1":
             os.system("clear")    
             sleep(1)
@@ -145,23 +212,29 @@ def Start_KickerFi():
             sleep(3)
             os.system("sudo service NetworkManager restart")
             sleep(1)
+            os.system("clear")
+            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED{reset} ...")
+            print("\n")
+            sleep(2)
+        
         elif c =="2":
             os.system("clear")    
             sleep(1)
             os.system("sudo airmon-ng wlan0 stop")
             sleep(3)
             os.system("sudo service NetworkManager restart")
-            sleep(1)
-            print(f"{orange}MONITOR MODE{reset} {green}DISABLED{reset} ...")
+            sleep(3)
+            os.system("clear")
+            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED{reset} ...")
             print("\n")
+            sleep(2)
         elif c =="3":
             exitting()
-        
         else: 
             print("Invalid input")
             exitting()
     
-    elif a =="c"or a =="C":
+    elif a =="c" or a =="C":
         print("Bye Bye :D")
         exitting()
     print("")
@@ -170,23 +243,11 @@ def Start_KickerFi():
 
 def SetupKickerFi():
     os.system("clear")
-
+    # TO DO
 print("Starting ... to co neno nastavene")
-os.system("clear")
-sleep(1)
-print(" ")
-print(" ")
-print(f"-------------------------------------------------")
-print(f"{blue}        (--)                         (--)        {reset}")
-print(f"------({green}O{reset}-__-{green}O{reset})                     ({green}O{reset}-__-{green}O{reset})------{reset}")
-print(f"         {green}/\{reset}                           {green}/\{reset}         ")
-print(f"        :  :    Welcome to {red}KickerFi{reset}  :  :        ")
-print(f"------({green}O{reset}-__-{green}O{reset})                     ({green}O{reset}-__-{green}O{reset})------{reset}")
-print(f"{blue}        (--)                         (--)        {reset}")
-print(f"-------------------------------------------------")
-print(" ")
-print(" ")
-sleep(2)
+
+KickerFiLOGO()
+
 os.system("clear")
 sleep(0.2)
 print(f"{red}                      Deauthentificator       {reset}")
@@ -206,8 +267,8 @@ sleep(1)
 WiFiLOGO()
 
 print(" ")
-print(f"{green}[ 1 ]{reset} {green}START KickerFi{reset} KICK ALL DEVICES on ALL WiFi Routers around 6 to 33 meters")
-print(f"{magenta}[ 2 ]{reset} {green}SETUP KickerFi{reset} {red}(NEED TO SET !){reset}")
+print(f"{green}[ 1 ]{reset} {green}START KickerFi{reset} {orange}KICK ALL DEVICES{reset} on {purple}ALL{reset} WiFi Routers ({purple}Distance{reset} : 6 - 20 meters)")
+print(f"{magenta}[ 2 ]{reset} {green}SETUP KickerFi{reset} ({red}NEED TO SET{reset} {orange}!{reset})")
 print(" ")
 print(f"{orange}[ 3 ]{reset} {orange}EXIT{reset}")
 
