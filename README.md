@@ -1,6 +1,6 @@
 # Welcome to M X T (folder)
 
-# Main App : stt.py Latest Update
+# Main App : stt-EN.py Latest Update
 
 Version : 1.0.0
 
@@ -17,6 +17,7 @@ TYPE HELP or -h For show commands to use
 2. cd MXT
 3. python3 installer.py
 4. python3 stt-EN.py
+5. (After Starting stt-EN.py Press allow for NO ISSUES)
 
 # [ USING ]
 This Python tool can be sed for :
@@ -24,4 +25,4 @@ This Python tool can be sed for :
 2. Capture and Bruteforce attacks : (HandShake, WiFi passwds, Evil Twin Attack ...)
 3. Wireless Back Door Set Up stuff
 4. WiFi Injection (Sniff photos, Credentials, searched or Downloaded)
-5. ...
+5. Sniff and Inject Cookies to browsers ...
