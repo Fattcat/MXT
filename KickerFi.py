@@ -1,7 +1,7 @@
 import os
 import subprocess
 from time import sleep
-import keyboard
+#import keyboard
 #import pywifi
 #from pywifi import const
 import sys
@@ -13,6 +13,7 @@ red = '\033[31m'
 green = '\033[32m'
 yellow = '\033[33m'
 blue = '\033[34m'
+P = '\033[15m'
 purple = '\033[34;45m'
 #orange = '\033[033m'
 orange = '\033[38;5;208m'
@@ -172,8 +173,12 @@ def AirodumpNg():
     os.system("clear")
     sleep(1)
     print(f"{yellow}Starting{reset} airodump-ng on ", Interface,"WIFi Adapter")
-    os.system("airodum-ng start" ,Interface)
     sleep(1)
+    SubProc = subprocess.Popen(["airodump-ng",Interface])
+    sleep(28)
+    SubProc.terminate()
+
+
 
 def AirCrackNg():
     os.system("clear")
@@ -196,40 +201,32 @@ def Start_KickerFi():
         MonMODE_wlan1()
         print(" ")
         print(" ")
-        print(f"[ 0 ] {green}START nieco co este NENI{reset} ")
-        print(f"[ 1 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on " ,Interface)
-        print(f"[ 2 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on " ,Interface)
-        print(f"[ 3 ] {red}EXIT{reset}")
+        print(f"[ 1 ] {green}START AiroDump-ng on{reset}",Interface)
+        print(f"[ 2 ] {orange}STOP{reset}{orange}MONITOR MODE{reset} on" ,Interface)
+        print(f"[ 3 ] ")
+        print(f"[ 4 ] {red}EXIT{reset}")
         c = input("Option : ")
-        if c =="0":
+        if c =="1":
             sleep(1)
             os.system("clear")
             print("Ahoj :D")
-            breakpoint
-        elif c =="1":
-            os.system("clear")    
-            sleep(1)
-            os.system("sudo airmon-ng wlan1 stop")
-            sleep(3)
-            os.system("sudo service NetworkManager restart")
-            sleep(1)
-            os.system("clear")
-            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED{reset} ...")
-            print("\n")
-            sleep(2)
-        
+            AirodumpNg()
         elif c =="2":
             os.system("clear")    
             sleep(1)
-            os.system("sudo airmon-ng wlan0 stop")
+            os.system("sudo airmon-ng",Interface ,"stop")
             sleep(3)
             os.system("sudo service NetworkManager restart")
             sleep(3)
             os.system("clear")
-            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED{reset} ...")
+            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED on{reset}on",Interface)
             print("\n")
             sleep(2)
+        
         elif c =="3":
+            print("Need to SET !")
+
+        elif c =="4":
             exitting()
         else: 
             print("Invalid input")
@@ -245,9 +242,7 @@ def Start_KickerFi():
 def SetupKickerFi():
     os.system("clear")
     # TO DO
-print("Starting ... to co neno nastavene")
-
-KickerFiLOGO()
+print("Starting ... to co neni nastavene")
 
 os.system("clear")
 sleep(0.2)
@@ -268,7 +263,7 @@ sleep(1)
 WiFiLOGO()
 
 print(" ")
-print(f"{green}[ 1 ]{reset} {green}START KickerFi{reset} {orange}KICK ALL DEVICES{reset} on {purple}ALL{reset} WiFi Routers ({purple}Distance{reset} : 6 - 20 meters)")
+print(f"{green}[ 1 ]{reset} {green}START KickerFi{reset} {orange}KICK ALL DEVICES{reset} on {P}ALL{reset} WiFi Routers ({P}Distance{reset} : 6 - 20 meters)")
 print(f"{magenta}[ 2 ]{reset} {green}SETUP KickerFi{reset} ({red}NEED TO SET{reset} {orange}!{reset})")
 print(" ")
 print(f"{orange}[ 3 ]{reset} {orange}EXIT{reset}")
