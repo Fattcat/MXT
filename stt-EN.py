@@ -79,13 +79,14 @@ sleep(1)
 
 while True:
     def StartSound():
-        sleep(0.3)
+        pass
+        #sleep(0.3)
         # FUNGUJE ZATIAL NA WINDOWSE --> playsound("AuughSound.mp3")
-        pygame.mixer.music.load("AuughSound.mp3")
-        pygame.mixer.music.play()
-        sleep(3)
-        print("Wait please ...")
-        sleep(3)
+        #pygame.mixer.music.load("AuughSound.mp3")
+        #pygame.mixer.music.play()
+        #sleep(3)
+       # print("Wait please ...")
+        #sleep(3)
         
     def helpCommands():
         print(f"'{green}-h{reset}' --> help")
@@ -156,12 +157,9 @@ while True:
         else:
             print("Wrong Input")
 
-    def DalsiSpustac():
-        subprocess.call(["Piskotky.py"])
-        # ESTE TO NENI CELE a ONO
     def Animation():
-        subprocess.call(["python", "animation.py"])
-
+        #subprocess.call(["python", "animation.py"])
+        os.system("python Piskotky.py")
     def REINSTALL():
         print("INSTALLING ALL PACKAGES ...\nPLEASE WAIT ...\n")
         sleep(1)
@@ -217,11 +215,11 @@ while True:
     def KickerFi():
         print(f"{green}Starting{reset} {orange}KickerFi{reset}")
         sleep(1)
-        subprocess.call([KickerFi.py])
-
+        #subprocess.call([KickerFi.py])
+        os.system("python KickerFi.py")
     def Piskotky():
-        subprocess.call([Piskotky.py])
-
+        #subprocess.call([Piskotky.py])
+        os.system("python Piskotky.py")
     print(f"{green}[ 1 ]{reset} Start stt.py")
     print(f"{green}[ 2 ]{reset} Start KickerFi.py")
     print(f"{green}[ 3 ]{reset} Start Piskotky.py")
@@ -239,6 +237,7 @@ while True:
     if a == "1":
         print("Loading ...")
         StartSound()
+        print("Neni to FUNKCNE ...")
         
     elif a == "2":
         print(f"{green}Starting ... {blue}KickerFi{reset}\n{reset}")
@@ -248,7 +247,7 @@ while True:
     elif a == "3":
         print(f'{green}Starting ...\n{reset}')
         sleep(1)
-        subprocess.call(["Piskotky.py"])
+        os.system("python Piskotky.py")
     elif a == "4":
         print(f'{red}Starting ...\n{reset}')
         sleep(1)
