@@ -1,6 +1,7 @@
 import os
 import subprocess
 from time import sleep
+import keyboard
 #import pywifi
 #from pywifi import const
 import sys
@@ -112,21 +113,6 @@ def KickerFiLOGO():
     print(" ")
     sleep(2)
 
-#def CheckSUDO():
-#    if os.geteuid() !=0:
-#        print(" ")
-#        print(" ")
-#        print(" ")
-#        print(f"{red}                Cannot continue{reset} {orange}!{reset} \n           Please start it again with {green}sudo{reset}")
-#        print(" ")
-#        print(" ")
-#        print(f"{orange}                    Exitting ...{reset}")
-#        exit()
-#    elif os.geteuid() ==1:
-#        print("Continue ...")
-#        pass
-#CheckSUDO()
-
 def exitting():
     print(" ")
     print(" ")
@@ -176,7 +162,7 @@ print(" ")
 print(" ")
 print(" ")
 Interface = input(f"Select WiFi interface ({green}wlan0{reset} or {green}wlan1{reset}) for Scanning: ")
-print(f"{green}Starting {reset}", Interface)
+print(f"{green}Starting on {reset}", Interface)
 sleep(1)
 print(" ")
 print(" ")
@@ -196,8 +182,6 @@ def AirCrackNg():
     print(" ")
     print("")
     
-
-
 def Start_KickerFi():
     os.system("clear")
     print(" ")
