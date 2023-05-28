@@ -248,7 +248,7 @@ while True:
     elif a == "3":
         print(f'{green}Starting ...\n{reset}')
         sleep(1)
-        subprocess.call(["Piskotky.py"]
+        subprocess.call(["Piskotky.py"])
     elif a == "4":
         print(f'{red}Starting ...\n{reset}')
         sleep(1)
