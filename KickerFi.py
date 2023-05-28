@@ -1,11 +1,11 @@
 import os
 import subprocess
 from time import sleep
-import pywifi
-from pywifi import const
+#import pywifi
+#from pywifi import const
 import sys
 
-wifi = pywifi.PyWiFi()
+#wifi = pywifi.PyWiFi()
 
 # FARBY
 red = '\033[31m'
