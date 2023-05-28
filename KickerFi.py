@@ -37,7 +37,7 @@ def DISCLAIMER():
         print("Ok, Continuining")
     elif dis =="No" or dis =="no":
         sleep(1)
-        print(" eXITING ...")
+        print(" Exitting ...")
         exit()
     else:
         print("Invalid Input --> Exitting ...")
