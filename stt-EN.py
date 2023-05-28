@@ -99,9 +99,8 @@ while True:
             print("Option 5 is for running an unfinished script")
             print("Option 6 is for Start Animated smile")
             print("Option 7 is for Selecting Languages (EN, SK, CZ, FR, ...)")
-            print("Option 8 is for RE-Installing necessary files and programs")
-            sleep(1)
-            os.system("clear")
+            print("Option 8 is for RE-Installing necessary files and programs\n")
+            input("PRESS ENTER FOR CONTINUE ")
         
         elif d =="-e":
             print("Exitting ...")
