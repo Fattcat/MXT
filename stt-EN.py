@@ -259,24 +259,23 @@ while True:
     if a == "1":
         print("Loading ...")
         StartSound()
-        #pygui()
+        
     elif a == "2":
         print(f"{green}Starting ... {blue}KickerFi{reset}\n{reset}")
         subprocess.call([KickerFi.py])
 
     elif a == "3":
-        
+        subprocess.call(["Piskotky.py"])
         print(f'{green}Starting ...\n{reset}')
     elif a == "4":
+        
         print(f'{red}Starting ...\n{reset}')
         REINSTALL()
 
     elif a == "5":
-        
         print(f'{green}Starting ...\n{reset}')
     
     elif a == "6":
-        
         print(f'{green}Starting ...\n{reset}')
         Animation()
     elif a == "7":
@@ -288,10 +287,12 @@ while True:
     elif a == "8":
         os.system("clear")
         sleep(0.3)
-        BYEBYE()
+        print("Starting RE-Installing all Necessary files ...")
+        sleep(0.3)
+        REINSTALL()
     
     elif a == "9":
-        Languages()
+        exit()
         print(f'{green}Starting ...\n{reset}')
 
     elif a =="-h":
