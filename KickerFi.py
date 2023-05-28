@@ -179,8 +179,10 @@ def AirodumpNg():
     SubProc.terminate()
 
 def AirEplayNg():
-    KickAll = subprocess.call(["aireplay-ng","--deauth","0",Interface])
+    subprocess.call(["aireplay-ng","--deauth","0",Interface])
 
+AirEplayNg()    
+    
 def AirCrackNg():
     os.system("clear")
     sleep(1)
