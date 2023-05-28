@@ -1,7 +1,6 @@
 import os
 #import keyboard
 import subprocess
-#import pyautogui
 import time
 from time import sleep
 import random
@@ -95,12 +94,13 @@ while True:
             print("Option 1 is for Start WiFi Scanner")
             print("Option 2 is for Start Kicking users from Routers Around You\n(YOU NEED TO WRITE Yes for start it without problems)")
             print("Option 3 is for Start Script to Capture Cookies on browsers : (Chrome, Edge, FireFox, Brave)")
-            print("Option 4 is for running an unfinished script")
+            print("Option 4 is for Start Script to Capture WiFi Hand Shake")
             print("Option 5 is for running an unfinished script")
             print("Option 6 is for Start Animated smile")
             print("Option 7 is for Selecting Languages (EN, SK, CZ, FR, ...)")
             print("Option 8 is for RE-Installing necessary files and programs\n")
-            input("PRESS ENTER FOR CONTINUE ")
+            input("PRESS ANY KEY FOR CONTINUE ")
+
         
         elif d =="-e":
             print("Exitting ...")
@@ -226,7 +226,7 @@ while True:
     print(f"{green}[ 1 ]{reset} Start stt.py")
     print(f"{green}[ 2 ]{reset} Start KickerFi.py")
     print(f"{green}[ 3 ]{reset} Start Piskotky.py")
-    print(f"{green}[ 4 ]{reset} Start SomeScript.py")
+    print(f"{green}[ 4 ]{reset} Start Capture WiFi HandShake")
     print(f"{green}[ 5 ]{reset} Start SomeScript.py")
     print(f"{yellow}[ 6 ]{reset} Animation :D")
     print(f"{orange}[ 7 ]{reset} Select Language")
@@ -239,7 +239,7 @@ while True:
 
     if a == "1":
         print("Loading ...")
-        StartSound()
+        StartScan()
         print("Neni to FUNKCNE ...")
         
     elif a == "2":
