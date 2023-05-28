@@ -19,6 +19,23 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
+def CheckSUDO():
+    if os.geteuid() !=0:
+        print(" ")
+        print(" ")
+        print(" ")
+        print(f"{red}                Cannot continue{reset} {orange}!{reset} \n           Please start it again with {green}sudo{reset}")
+        print(" ")
+        print(" ")
+        print(f"{orange}                    Exitting ...{reset}")
+        exit()
+    elif os.geteuid() ==1:
+        print("Continue ...")
+        pass
+CheckSUDO()
+
+
+
 def DISCLAIMER():
     os.system("clear")
     print(" ")
