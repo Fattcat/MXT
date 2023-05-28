@@ -78,15 +78,11 @@ print("+------------------------------------------------------------------------
 sleep(1)
 
 while True:
-    def StartSound():
-        pass
-        #sleep(0.3)
-        # FUNGUJE ZATIAL NA WINDOWSE --> playsound("AuughSound.mp3")
-        #pygame.mixer.music.load("AuughSound.mp3")
-        #pygame.mixer.music.play()
-        #sleep(3)
-       # print("Wait please ...")
-        #sleep(3)
+    def StartScan():
+        os.system("clear")
+        sleep(1)
+        print("NENI TO DOKONCENE MA TO SPUSTIT WiFi SCANNER")
+        #os.system("")
         
     def helpCommands():
         print(f"'{green}-h{reset}' --> help")
@@ -95,8 +91,15 @@ while True:
         if d == "-h":
             os.system("clear")
             sleep(1)
-            print("SOmething here")
-            print
+            print(f"- {green}Help Centre{reset} -\n")
+            print("Option 1 is for Start WiFi Scanner")
+            print("Option 2 is for Start Kicking users from Routers Around You\n(YOU NEED TO WRITE Yes for start it without problems)")
+            print("Option 3 is for Start Script to Capture Cookies on browsers : (Chrome, Edge, FireFox, Brave)")
+            print("Option 4 is for running an unfinished script")
+            print("Option 5 is for running an unfinished script")
+            print("Option 6 is for Start Animated smile")
+            print("Option 7 is for Selecting Languages (EN, SK, CZ, FR, ...)")
+            print("Option 8 is for RE-Installing necessary files and programs")
             sleep(1)
             os.system("clear")
         
@@ -216,10 +219,11 @@ while True:
         print(f"{green}Starting{reset} {orange}KickerFi{reset}")
         sleep(1)
         #subprocess.call([KickerFi.py])
-        os.system("python KickerFi.py")
+        os.system("python3 KickerFi.py")
     def Piskotky():
         #subprocess.call([Piskotky.py])
-        os.system("python Piskotky.py")
+        os.system("clear")
+        os.system("python3 Piskotky.py")
     print(f"{green}[ 1 ]{reset} Start stt.py")
     print(f"{green}[ 2 ]{reset} Start KickerFi.py")
     print(f"{green}[ 3 ]{reset} Start Piskotky.py")
