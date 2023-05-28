@@ -1,9 +1,7 @@
 # Welcome to M X T (folder)
 
-# Main App : stt-EN.py Latest Update
-
+Main App : stt-EN.py ( Date of Latest Update : 28.5.2023)
 Version : 1.0.0
-
 TYPE HELP or -h For show commands to use
 
 # [ ! DISCLAIMER ! ]
