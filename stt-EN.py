@@ -86,16 +86,6 @@ while True:
         sleep(3)
         print("Wait please ...")
         sleep(3)
-        #PRE ANDROID JE TENTO ROADOK NIZSIE
-        pygame.mixer.music.load("AuughSound.mp3")
-        pygame.mixer.music.play()
-        sleep(3)
-        print(".")
-        sleep(0.3)
-        print("..")
-        sleep(0.3)
-        print("...")
-        sleep(0.3)
         
     def helpCommands():
         print(f"'{green}-h{reset}' --> help")
@@ -201,16 +191,6 @@ while True:
         os.system("clear")
         exit()
 
-    #def pygui():
-        #for i in range(3):
-            #sleep(1)
-            #pyautogui.rightClick()
-            #sleep(1)
-            #pyautogui.mouseDown()
-            #sleep(1)
-            #pyautogui.mouseUp()
-            #sleep(1)
-
     def iwconfig():
         print("Starting IWCONFIG ...\n")
         sleep(1)
@@ -262,27 +242,30 @@ while True:
         
     elif a == "2":
         print(f"{green}Starting ... {blue}KickerFi{reset}\n{reset}")
-        subprocess.call([KickerFi.py])
+        sleep(1)
+        KickerFi()
 
     elif a == "3":
-        subprocess.call(["Piskotky.py"])
         print(f'{green}Starting ...\n{reset}')
+        sleep(1)
+        subprocess.call(["Piskotky.py"]
     elif a == "4":
-        
         print(f'{red}Starting ...\n{reset}')
+        sleep(1)
         REINSTALL()
 
     elif a == "5":
         print(f'{green}Starting ...\n{reset}')
-    
+        sleep(1)
+        
     elif a == "6":
         print(f'{green}Starting ...\n{reset}')
+        sleep(1)
         Animation()
     elif a == "7":
         print(f'{green}Starting ...\n{reset}')
         sleep(1)
         Languages()
-
 
     elif a == "8":
         os.system("clear")
