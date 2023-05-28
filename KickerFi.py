@@ -32,10 +32,7 @@ def CheckSUDO():
     elif os.geteuid() ==1:
         sleep(2)
         print("Starting with SUDO privileges ...")
-        
 CheckSUDO()
-
-
 
 def DISCLAIMER():
     os.system("clear")
@@ -47,9 +44,10 @@ def DISCLAIMER():
     print(f"                     {yellow}+{reset} ------------------ {yellow}+{reset}")
     print(" ")
     print(" ")
-    dis = input(f"Do You Really want to Start THIS SCRIPT FOR KICKING ALL USERS from ALL WiFi Routers ? ({green}Yes{reset} / {red}No{reset}) : ")
+    print(f"Do You Really want to Start THIS SCRIPT FOR KICKING ALL USERS from ALL WiFi Routers ? ({green}Yes{reset} / {red}No{reset}) : ")
     print(" ")
     print(" ")
+    dis = input("--> ")
     if dis == "Yes" or dis =="yes":
         sleep(1)
         print("Ok, Continuining")
