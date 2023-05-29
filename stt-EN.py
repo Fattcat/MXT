@@ -20,7 +20,7 @@ cyan = '\033[36m'
 reset = '\033[0m'
 
 # Made by Fattcat with Love and hacking Skill #
-# LAST UPDATED and add sme Features with PROGRAMS : 13,05,2023
+# LAST UPDATED and add sme Features with PROGRAMS : 29.05.2023
 
 pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
