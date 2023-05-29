@@ -161,7 +161,7 @@ while True:
 
     def Animation():
         #subprocess.call(["python", "animation.py"])
-        os.system("python3 Piskotky.py")
+        os.system("python3 animation.py")
     def REINSTALL():
         print("INSTALLING ALL PACKAGES ...\nPLEASE WAIT ...\n")
         sleep(1)
