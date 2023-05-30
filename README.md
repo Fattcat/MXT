@@ -23,4 +23,5 @@ This Python tool can be sed for :
 2. Capture and Bruteforce attacks : (HandShake, WiFi passwds, Evil Twin Attack ...)
 3. Wireless Back Door Set Up stuff
 4. WiFi Injection (Sniff photos, Credentials, searched or Downloaded)
-5. Sniff and Inject Cookies to browsers ...
+5. Creating Worm with WormCreator.py
+6. Sniff and Inject Cookies to browsers ...
