@@ -53,6 +53,26 @@ textos = """
                        .~!!7!::!7!!~. 
                        
                                                             """
+
+def RemoteAntivirusOff():
+    pass
+
 text = red + textos + reset
 print(text)
-
+os.system("clear")
+sleep(0.3)
+print("\n")
+print("\n")
+print(f"[1] - Startuj nieco ...")
+print(f"[2] - NASTAV nieco ...")
+print(f"[3] - ULOZ nieco ...")
+print(f"[4] - SPUSTI na inom PC nieco ...")
+print(f"[5] - Startuj nieco ...")
+print(f"[6] - Startuj nieco ...")
+print(f"[7] - Startuj nieco ...")
+print(f"[8] - Startuj nieco ...")
+print(f"[9] - NASTAVENIA ...")
+print(f"[10] - EXIT")
+print("\n")
+print("\n")
+Option = input("Select : ")
