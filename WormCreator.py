@@ -53,12 +53,12 @@ textos = """
                        .~!!7!::!7!!~. 
                        
                                                             """
-
 def RemoteAntivirusOff():
     pass
 
 text = red + textos + reset
 print(text)
+sleep(2)
 os.system("clear")
 sleep(0.3)
 print("\n")
