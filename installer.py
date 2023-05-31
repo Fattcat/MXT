@@ -29,6 +29,9 @@ def apt_install(package):
         apt_install(package)  # Opakovane sa pokús o inštaláciu
 
 try:
+    install("sys")
+
+    install("socket")
 
     install("playsound")
 
