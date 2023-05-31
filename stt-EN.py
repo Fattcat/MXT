@@ -1,12 +1,12 @@
 import os
-#import keyboard
+import keyboard
 import subprocess
 import time
 from time import sleep
 import random
 #from playsound import playsound
 #import pywifi
-#import pygame
+import pygame
 
 red = '\033[31m'
 green = '\033[32m'
@@ -20,7 +20,7 @@ cyan = '\033[36m'
 reset = '\033[0m'
 
 # Made by Fattcat with Love and hacking Skill #
-# LAST UPDATED and add sme Features with PROGRAMS : 29.05.2023
+# LAST UPDATED and add sme Features with PROGRAMS : 13,05,2023
 
 pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
@@ -31,36 +31,35 @@ sleep(1)
 print("                                                                                 ")
 sleep(1)
 print("                                                                                 ")
-sleep(0.2)
+sleep(0.1)
 print("                                                                                 ")
-sleep(0.2)
+sleep(0.1)
 print("                                                                                 ")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}               .^^^^:  ::::::::^..::::::::^.                                    {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}             ~PPYJJ5Y :YYY5&GYY5~:YYYP&PYYY^                                    {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}             #&.          ^@J        ~@7         :!.:!77~.  ~~     :!.          {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}             !GGY7^       ^@J        !@7         7@P?!!7P#~ ?@!   .#P           {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}               :7YGG?     ^@J        !@7         !@7     #B  Y@^  GG            {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}                   ?@?    ^@J        !@7         !@7    :&P   PB.Y#.            {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}           .5Y?77JGG:    ^@J        !@7    .PY  !@GJ7!?GP:    G##:             {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}             :~!7!~:      .~:        .~.     !~  !@!:!!!:      J@~              {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}                                                 7@!        ~!YB~               {reset}")
-sleep(0.2)
+sleep(0.1)
 print(f"{red}                                                :!.        ~7!.                {reset}")
-sleep(0.2)
+sleep(0.1)
 print("                                                                                ")
-sleep(0.2)
+sleep(0.1)
 print("                                                                                ")
 sleep(2)
-
 
 os.system("clear")
 print("+-------------------------------------------------------------------------+\n")
@@ -161,7 +160,7 @@ while True:
 
     def Animation():
         #subprocess.call(["python", "animation.py"])
-        os.system("python3 animation.py")
+        os.system("python Piskotky.py")
     def REINSTALL():
         print("INSTALLING ALL PACKAGES ...\nPLEASE WAIT ...\n")
         sleep(1)
@@ -227,7 +226,7 @@ while True:
     print(f"{green}[ 2 ]{reset} Start KickerFi.py")
     print(f"{green}[ 3 ]{reset} Start Piskotky.py")
     print(f"{green}[ 4 ]{reset} Start Capture WiFi HandShake")
-    print(f"{green}[ 5 ]{reset} Start SomeScript.py")
+    print(f"{green}[ 5 ]{reset} Start WormCreator.py")
     print(f"{yellow}[ 6 ]{reset} Animation :D")
     print(f"{orange}[ 7 ]{reset} Select Language")
     print(f"{orange}[ 8 ]{reset} RE-INSTALL ALL PACKAGES")
@@ -243,14 +242,13 @@ while True:
         print("Neni to FUNKCNE ...")
         
     elif a == "2":
-        print(f"{green}Starting ... {blue}KickerFi{reset}\n{reset}")
         sleep(1)
         KickerFi()
 
     elif a == "3":
         print(f'{green}Starting ...\n{reset}')
         sleep(1)
-        os.system("python Piskotky.py")
+        os.system("python3 Piskotky.py")
     elif a == "4":
         print(f'{red}Starting ...\n{reset}')
         sleep(1)
@@ -259,6 +257,7 @@ while True:
     elif a == "5":
         print(f'{green}Starting ...\n{reset}')
         sleep(1)
+        os.system("python3 WormCreator.py")
         
     elif a == "6":
         print(f'{green}Starting ...\n{reset}')
@@ -277,8 +276,8 @@ while True:
         REINSTALL()
     
     elif a == "9":
-        exit()
-        print(f'{green}Starting ...\n{reset}')
+        print(f'{green}\nExitting ...\n{reset}')
+        BYEBYE()
 
     elif a =="-h":
         helpCommands()
