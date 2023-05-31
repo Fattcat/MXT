@@ -4,6 +4,7 @@ import subprocess
 import shutil
 import sys
 import random
+import getpass
 
 red = '\033[31m'
 green = '\033[32m'
@@ -16,13 +17,7 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
-Words = ["Ohh", "More sak", "Ciii Kokiiii", "Fuuha", "xD", "LoL"]
-RanGenerated = random.choice(Words)
-
-for i in range(99):
-    print(RanGenerated + "Neni dokonceny")
-    sleep(0.01)
-    print(i)
-    sleep(0.1)
-    if i > 90:
-        print("LOL...")
+meno = getpass.getuser()
+words = ["Whats up Dude", "Hello", "Hi"]
+ranGen = random.choice(words)
+print(ranGen, (meno), "THIS IS WormCreator.py POWERFUL PYTHON SCRIPT")
