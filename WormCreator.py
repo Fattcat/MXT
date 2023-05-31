@@ -1,5 +1,6 @@
 from time import sleep
 import os
+import keyboard
 import subprocess
 import random
 import socket
@@ -17,7 +18,8 @@ reset = '\033[0m'
 
 os.system("clear")
 sleep(1)
-
+print(f"                 Welcome to {red}WormCreator.py{reset}")
+print(f"\n                   Created by {orange}Fattcat{reset}\n     GitHub Link : {green}https://github.com/Fattcat/MXT/{reset}")
 textos = """
     
 
@@ -54,6 +56,11 @@ textos = """
                        .~!!7!::!7!!~. 
                        
                                                             """
+sleep(2)
+
+def handle_ctrl_c():
+    print("Dovidenia :D")
+
 def RemoteAntivirusOff():
     pass
 
@@ -64,16 +71,59 @@ os.system("clear")
 sleep(0.3)
 print("\n")
 print("\n")
-print(f"[1] - Startuj nieco ...")
-print(f"[2] - NASTAV nieco ...")
-print(f"[3] - ULOZ nieco ...")
-print(f"[4] - SPUSTI na inom PC nieco ...")
-print(f"[5] - Startuj nieco ...")
-print(f"[6] - Startuj nieco ...")
-print(f"[7] - Startuj nieco ...")
-print(f"[8] - Startuj nieco ...")
-print(f"[9] - NASTAVENIA ...")
-print(f"[10] - EXIT")
+print(f"   {green}Your Main Menu{reset}\n")
+print(f"[ {yellow}1{reset} ] - Startuj nieco ...")
+print(f"[ {yellow}2{reset} ] - NASTAV nieco ...")
+print(f"[ {yellow}3{reset} ] - ULOZ nieco ...")
+print(f"[ {yellow}4{reset} ] - SPUSTI na inom PC nieco ...")
+print(f"[ {yellow}5{reset} ] - Startuj nieco ...")
+print(f"[ {yellow}6{reset} ] - Startuj nieco ...")
+print(f"[ {yellow}7{reset} ] - Startuj nieco ...")
+print(f"[ {yellow}8{reset} ] - Startuj nieco ...")
+print(f"[ {yellow}9{reset} ] - NASTAVENIA ...")
+print(f"[ {red}10{reset} ] - EXIT")
 print("\n")
 print("\n")
 Option = input("Select : ")
+if Option == "1":
+    pass
+
+elif Option == "2":
+    os.system("python3 WormSetupper.py")
+
+elif Option == "3":
+    pass
+
+elif Option == "4":
+    pass
+
+elif Option == "5":
+    pass
+
+elif Option == "6":
+    pass
+
+elif Option == "7":
+    pass
+
+elif Option == "8":
+    pass
+
+elif Option == "9":
+    pass
+
+elif Option == "10":
+    pass
+
+else:
+    print(f"{red}Invalid INPUT !{reset}")
+
+while True:
+    if keyboard.is_pressed('ctrl+c'):
+      handle_ctrl_c()
+      keyboard.wait('esc')
+      print("           ------------")
+      print("Exitting ( < O > : < O > )")
+      print("           ------------")
+      sleep(1)
+      exit()
