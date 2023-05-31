@@ -21,20 +21,36 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
+#def CheckFile():
+#    if not os.path.exists("Adapters.txt"):
+#        with open("Adapters.txt","w")as file:
+#            file.write(" ")
+#CheckFile()
+#
+#def ReadFile():
+#    with open("Adapters.txt", "r") as file:
+#        Content = file.read()
+#        if "wlan1" in "Adapters.txt":
+#            print("JE to tu : ",Content)
+#
+#def SaveOutput(output):
+#    with open("Adapter.txt", "w")as file:
+#        file.write(output)
+#
+
 def CheckFile():
     if not os.path.exists("Adapters.txt"):
-        with open("Adapters.txt","w")as file:
+        with open("Adapters.txt", "w") as file:
             file.write(" ")
-CheckFile()
 
 def ReadFile():
     with open("Adapters.txt", "r") as file:
         Content = file.read()
-        if "wlan1" in "Adapters.txt":
-            print("JE to tu : ",Content)
+        if "wlan1" in Content:
+            print("JE to tu: ", Content)
 
 def SaveOutput(output):
-    with open("Adapter.txt", "w")as file:
+    with open("Adapters.txt", "w") as file:
         file.write(output)
 
 def CheckSUDO():
