@@ -50,8 +50,8 @@ def ReadFile():
             print("JE to tu: ", Content)
 
 def SaveOutput(output):
-    with open("Adapters.txt", "w") as file:
-        file.write(output)
+    with open("Adapters.txt", "a") as file:
+        file.write(output + "\n")
 
 def CheckSUDO():
     if os.geteuid() !=0:
@@ -67,6 +67,16 @@ def CheckSUDO():
         sleep(2)
         print("Starting with SUDO privileges ...")
 CheckSUDO()
+
+print(" ")
+print(" ")
+print("-------------------------------------------------------------------------")
+print(f"                     Please {yellow}PLUG IN{reset} Your WiFi Adapter")
+print("-------------------------------------------------------------------------")
+print(" ")
+print(" ")
+sleep(3)
+
 
 def DISCLAIMER():
     os.system("clear")
@@ -202,8 +212,6 @@ def MonMODE_wlan0Down():
 
 KickerFiLOGO()
 
-sleep(0.1)
-os.system("clear")
 sleep(1)
 print(" ")
 print(" ")
@@ -238,13 +246,6 @@ def AirCrackNg():
     
 def Start_KickerFi():
     os.system("clear")
-    print(" ")
-    print(" ")
-    print(f"           {yellow}PLUG IN{reset} Your WiFi Adapter")
-    print(" ")
-    print(" ")   
-    sleep(3)
-
     a = input(f"Type {green}Y{reset} for {green}START{reset} or {red}C{reset} for {red}CANCEL{reset} : ")
     if a =="y" or a =="Y":
         MonMODE_wlan1()
@@ -290,6 +291,13 @@ def Start_KickerFi():
 
 def SetupKickerFi():
     os.system("clear")
+    print("Write WiFi adapter For save")
+    print(f"[ 1 ] wlan{green}0{reset}")
+    print(f"[ 2 ] wlan{green}1{reset}")
+    AdapterChoice = input("Pick : ")
+    with open("Adapters.txt","w") as file:
+        file.write(AdapterChoice)
+    
     # TO DO
 print("Which WiFi Adapter you want to save for next use ?\n[ 1 ] wlan0\n[ 2 ] wlan1\n")
 SaveAndForNexUse = input("  Select --> ")
