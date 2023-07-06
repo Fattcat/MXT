@@ -1,12 +1,12 @@
 import os
-import keyboard
+#import keyboard
 import subprocess
 import time
 from time import sleep
 import random
 #from playsound import playsound
 #import pywifi
-import pygame
+#import pygame
 
 red = '\033[31m'
 green = '\033[32m'
