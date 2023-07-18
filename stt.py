@@ -2,11 +2,12 @@ import os
 #import keyboard
 import subprocess
 import time
+import signal
 from time import sleep
 import random
 #from playsound import playsound
 #import pywifi
-#import pygame
+import pygame
 
 red = '\033[31m'
 green = '\033[32m'
@@ -20,7 +21,11 @@ cyan = '\033[36m'
 reset = '\033[0m'
 
 # Made by Fattcat with Love and hacking Skill #
-# LAST UPDATED and add sme Features with PROGRAMS : 31.05.2023
+# LAST UPDATED and add some Features with PROGRAMS : 18,07,2023
+
+Colors = (red, green, yellow, blue , P, orange)
+PickColor = random.choice(Colors)
+RESET = '\033[0m'
 
 pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
@@ -59,27 +64,34 @@ sleep(0.1)
 print("                                                                                ")
 sleep(0.1)
 print("                                                                                ")
-sleep(2)
-
-os.system("clear")
-print("+-------------------------------------------------------------------------+\n")
-sleep(0.3)
-print(f"|/////////////////////////// {blue}WELCOME TO{reset} {red}stt.py{reset} ///////////////////////////|")
-print(f"|///////////////////////////   {green}Version 1.0.0{reset}   ///////////////////////////|")
-sleep(0.3)
-print(f"|////////////////////////// Created By Fattcat ///////////////////////////|\n")
-sleep(0.3)
-print(f"|/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|\n")
-sleep(0.3)
-print("                      ",random.choice(pozdravy),"(Random Generated)\n")
-print("+-------------------------------------------------------------------------+\n")
 sleep(1)
 
+os.system("clear")
+print(f"{green}+{reset} ------------------------------------------------------------------------- {green}+{reset}\n")
+sleep(0.1)
+print(f" |/////////////////////////// {blue}WELCOME TO{reset} {red}stt.py{reset} ///////////////////////////|")
+print(f" |///////////////////////////   {green}Version 1.0.0{reset}   ///////////////////////////|")
+sleep(0.1)
+print(f" |////////////////////////// Created By Fattcat ///////////////////////////|\n")
+sleep(0.1)
+print(f" |                  -->", PickColor, "https://github.com/Fattcat", RESET,  "<--                    |\n")
+sleep(0.1)
+print(f" |/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|\n")
+sleep(0.1)
+print(" ", " " *23 ,random.choice(pozdravy),"(Random Generated)\n")
+print(f"{green}+{reset} ------------------------------------------------------------------------- {green}+{reset}\n")
+sleep(0.5)
+
 while True:
-    def StartScan():
-        os.system("clear")
-        sleep(1)
-        print("NENI TO DOKONCENE MA TO SPUSTIT WiFi SCANNER")
+    #os.system("clear")
+    sleep(1)
+    #def StartScan():
+    #pass
+    def signal_handler(signal, frame):
+        print(f"\nPressed {red}CTRL C{reset}\nExitting... Bye...")
+        exit(0)
+    signal.signal(signal.SIGINT, signal_handler)
+# Spustenie skenovania WiFi sietí
         #os.system("")
         
     def helpCommands():
@@ -223,7 +235,7 @@ while True:
         os.system("clear")
         os.system("python3 Piskotky.py")
     print(f"{green}[ 1 ]{reset} Start stt.py")
-    print(f"{green}[ 2 ]{reset} Start KickerFi.py")
+    print(f"{green}[ 2 ]{reset} Start KickerFi.py  --> {blue}[{reset} {green}BEST FOR USE{reset} {blue}]{reset}")
     print(f"{green}[ 3 ]{reset} Start Piskotky.py")
     print(f"{green}[ 4 ]{reset} Start Capture WiFi HandShake")
     print(f"{green}[ 5 ]{reset} Start WormCreator.py")
@@ -238,7 +250,7 @@ while True:
 
     if a == "1":
         print("Loading ...")
-        StartScan()
+        #StartScan()
         print("Neni to FUNKCNE ...")
         
     elif a == "2":
@@ -282,6 +294,7 @@ while True:
     elif a =="-h":
         helpCommands()
     else:
+        print("Wrong Input !\n")
         b = input(f"Press {green}Y{reset} to restart stt.py OR Press {red}N{reset} for exit : ")
         if b =="Y" or b =="y" or b =="yes" or b =="Yes":
             continue
