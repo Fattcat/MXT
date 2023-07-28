@@ -58,8 +58,10 @@ textos = """
                                                             """
 sleep(2)
 
-def handle_ctrl_c():
+def handle_ctrl_c(signal, frame):
     print("Dovidenia :D")
+    signal.signal(signal.SIGINT, handle_ctrl_c)
+    exit(0)
 
 def RemoteAntivirusOff():
     pass
@@ -113,7 +115,7 @@ elif Option == "9":
     pass
 
 elif Option == "10":
-    pass
+    exit()
 
 else:
     print(f"{red}Invalid INPUT !{reset}")
