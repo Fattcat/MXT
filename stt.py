@@ -7,7 +7,7 @@ from time import sleep
 import random
 #from playsound import playsound
 #import pywifi
-import pygame
+#import pygame
 
 red = '\033[31m'
 green = '\033[32m'
@@ -29,12 +29,12 @@ RESET = '\033[0m'
 
 pozdravy = ("Hello", "Hi", "Whats Up Dude", "Stay Free", "PROFESSIONAL")
 
-print(f'{red}Hello, world!{reset}')
-
+sleep(2)
 os.system("clear")
-sleep(1)
+
+sleep(0.3)
 print("                                                                                 ")
-sleep(1)
+sleep(0.1)
 print("                                                                                 ")
 sleep(0.1)
 print("                                                                                 ")
@@ -64,9 +64,10 @@ sleep(0.1)
 print("                                                                                ")
 sleep(0.1)
 print("                                                                                ")
-sleep(1)
-
+print(f"                      {blue}[{reset} {green}Your ULTIMATE FULL Hacking Tool{reset} {blue}]{reset}")
+sleep(3)
 os.system("clear")
+sleep(0.5)
 print(f"{green}+{reset} ------------------------------------------------------------------------- {green}+{reset}\n")
 sleep(0.1)
 print(f" |/////////////////////////// {blue}WELCOME TO{reset} {red}stt.py{reset} ///////////////////////////|")
@@ -74,7 +75,7 @@ print(f" |///////////////////////////   {green}Version 1.0.0{reset}   //////////
 sleep(0.1)
 print(f" |////////////////////////// Created By Fattcat ///////////////////////////|\n")
 sleep(0.1)
-print(f" |                  -->", PickColor, "https://github.com/Fattcat", RESET,  "<--                    |\n")
+print(f" |                 -->", PickColor, "https://github.com/Fattcat", RESET,  "<--                   |\n")
 sleep(0.1)
 print(f" |/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|\n")
 sleep(0.1)
@@ -83,16 +84,11 @@ print(f"{green}+{reset} --------------------------------------------------------
 sleep(0.5)
 
 while True:
-    #os.system("clear")
     sleep(1)
-    #def StartScan():
-    #pass
     def signal_handler(signal, frame):
         print(f"\nPressed {red}CTRL C{reset}\nExitting... Bye...")
         exit(0)
     signal.signal(signal.SIGINT, signal_handler)
-# Spustenie skenovania WiFi sietí
-        #os.system("")
         
     def helpCommands():
         print(f"'{green}-h{reset}' --> help")
@@ -172,7 +168,7 @@ while True:
 
     def Animation():
         #subprocess.call(["python", "animation.py"])
-        os.system("python Piskotky.py")
+        os.system("python3 Piskotky.py")
     def REINSTALL():
         print("INSTALLING ALL PACKAGES ...\nPLEASE WAIT ...\n")
         sleep(1)
@@ -234,25 +230,26 @@ while True:
         #subprocess.call([Piskotky.py])
         os.system("clear")
         os.system("python3 Piskotky.py")
-    print(f"{green}[ 1 ]{reset} Start stt.py")
-    print(f"{green}[ 2 ]{reset} Start KickerFi.py  --> {blue}[{reset} {green}BEST FOR USE{reset} {blue}]{reset}")
-    print(f"{green}[ 3 ]{reset} Start Piskotky.py")
+
+    print(f"{green}[ 1 ]{reset} Start stt")
+    print(f"{green}[ 2 ]{reset} Start KickerFi --> {blue}[{reset} {green}BEST FOR USE{reset} {blue}]{reset}")
+    print(f"{green}[ 3 ]{reset} Start Piskoty [ Cookie Stealer ]")
     print(f"{green}[ 4 ]{reset} Start Capture WiFi HandShake")
-    print(f"{green}[ 5 ]{reset} Start WormCreator.py")
+    print(f"{green}[ 5 ]{reset} Start WormCreator")
     print(f"{yellow}[ 6 ]{reset} Animation :D")
     print(f"{orange}[ 7 ]{reset} Select Language")
     print(f"{orange}[ 8 ]{reset} RE-INSTALL ALL PACKAGES")
+    
     print(" ")
+    
     print(f"{red}[ 9 ]{reset} Exit")
     print(f"{green}[ -h ]{reset} Help")
     print(" ")
     a = input(f"{blue}Select Option : {reset}")
 
     if a == "1":
-        print("Loading ...")
-        #StartScan()
-        print("Neni to FUNKCNE ...")
-        
+        print(f"Starting stt.py ...")
+
     elif a == "2":
         sleep(1)
         KickerFi()
