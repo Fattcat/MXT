@@ -2,6 +2,7 @@ import os
 import datetime
 from time import sleep
 import random
+#from selenium import webdriver
 
 # VERSION 1.0.0
 # Date 11.06.2023
@@ -61,42 +62,62 @@ def BigCookie():
     
     """)
 
+def ChromeCookStealer():
+        # Launch Chrome browser
+    driver = webdriver.Chrome()
+
+    # Open a website
+    driver.get("https://www.example.com")
+
+    # Find and interact with elements on the page
+    element = driver.find_element_by_id("myElement")
+    element.click()
+
+    # Extract information from the page
+    text = driver.find_element_by_css_selector(".myClass").text
+    print(text)
+
+    # Close the browser
+    driver.quit()
 
 os.system("clear")
 
 print("\n")
 print("\n")
-print(f"                  {red}PisKoTKy{reset} \n")
-print(f"{green}Welcome to PisKoTKy{reset} A.K.A. Fake cookie Stealer")
+print(f"                           {red}PisKoTKy{reset} \n")
+print(f"{green}         Welcome to PisKoTKy{reset} A.K.A. Fake cookie Stealer")
 BigCookie()
 
-print(f"[ {green}1{reset} ] --> {orange}Start {reset}")
-print(f"[ {green}2{reset} ] --> {orange}Start {reset}")
-print(f"[ {green}3{reset} ] --> {orange}Start {reset}")
-print(f"[ {green}4{reset} ] --> {orange}Start {reset}")
-print(f"[ {green}5{reset} ] --> {orange}Start {reset}")
+print(f"[ {orange}1{reset} ] --> {green}Start {orange}Chrome{reset} Cookie Stealer")
+print(f"[ {orange}2{reset} ] --> {green}Start {orange}Microsoft{reset} Edge Cookie Stealer{reset}")
+print(f"[ {orange}3{reset} ] --> {green}Start {orange}Firefox{reset} Cookie Stealer{reset}")
+print(f"[ {orange}4{reset} ] --> {green}Start {orange}Opera{reset} Cookie Stealer{reset}")
+print(f"[ {orange}5{reset} ] --> {green}Select WHERE You want TO SAVE Output{reset}")
 print(f"[ {red}99{reset} ] --> {red}EXIT{reset}")
 print("\n")
-FirstChoice = input(f"{yellow}-->{reset} ")
+FirstChoice = input(f"{yellow}      ----->{reset} ")
 
 if FirstChoice =="1":
-    print(f"{green}Starting{reset} nieco ...")
+    print(f"{green}Starting{reset} ChromeCookStealer ...")
+    ChromeCookStealer()
 
 elif FirstChoice =="2":
-    print(f"{green}Starting{reset} nieco ...")
+    print(f"{green}Starting{reset}Chrome C.S. ...")
 
 elif FirstChoice =="3":
-    print(f"{green}Starting{reset} nieco ...")
+    print(f"{green}Starting{reset}Microsoft Edge C.S. ...")
 
 elif FirstChoice =="4":
-    print(f"{green}Starting{reset} nieco ...")
+    print(f"{green}Starting{reset}Opera C.S. ...")
 
 elif FirstChoice =="5":
-    print(f"{green}Starting{reset} nieco ...")
+    print(f"{green}Starting{reset} SeTTinGZ ...")
 
-elif FirstChoice =="6":
+elif FirstChoice =="99":
     EXIT()
 else:
-    print("Bad INPUT number")
+    print("       + ----------------------- +")
+    print("       + - Wrong INPUT number  - +")
+    print("       + ----------------------- +")
     sleep(1)
     EXIT()
