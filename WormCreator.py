@@ -16,6 +16,18 @@ magenta = '\033[35m'
 cyan = '\033[36m'
 reset = '\033[0m'
 
+def BYEBYE():
+        print("")
+        print("")
+        print(f"        {blue}+--------------------------------------------+{reset}")
+        print(f"              |            {yellow}BYE BYE              {reset}|")
+        print(f"              |  {green}Thank You for using stt.py{reset}     |")
+        print(f"        {blue}+--------------------------------------------+{reset}")
+        print("")
+        print("")
+        sleep(1)
+        os.system("clear")
+
 os.system("clear")
 sleep(1)
 print(f"                 Welcome to {red}WormCreator.py{reset}")
@@ -115,6 +127,8 @@ elif Option == "9":
     pass
 
 elif Option == "10":
+    BYEBYE()
+    sleep(1)
     exit()
 
 else:
