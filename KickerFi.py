@@ -116,7 +116,7 @@ def DISCLAIMER():
 DISCLAIMER()
 
 def WiFiLOGO():
-    print(f"""{red}                                                    .!:
+    print(f"""{red}                                       .!:
                                                      .?B@&Y:     
                                                   .?#@@@@@&!    
                                                 :J#@@@@@@P~     
@@ -306,7 +306,7 @@ def Start_KickerFi():
         MonMODE_wlan1()
         print(" ")
         print(" ")
-        print(f"[ 1 ] {green}START AiroDump-ng on{reset}",Interface, "(And after 28 Seconds deauth)")
+        print(f"[ 1 ] {green}START AiroDump-ng on{reset}",Interface, "(After 28 seconds Start Deauth Attack)")
         print(f"[ 2 ] {orange}STOP{reset} {orange}MONITOR MODE{reset} on" ,Interface)
         print(f"[ 3 ] neni nastavene")
         print(f"[ 4 ] {red}EXIT{reset}")
