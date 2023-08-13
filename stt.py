@@ -75,11 +75,11 @@ print(f" |///////////////////////////   {green}Version 1.0.0{reset}   //////////
 sleep(0.1)
 print(f" |////////////////////////// Created By Fattcat ///////////////////////////|\n")
 sleep(0.1)
-print(f" |                 -->", PickColor, "https://github.com/Fattcat", RESET,  "<--                   |\n")
+print(f" |                 -->", PickColor, "https://github.com/Fattcat", RESET,  "<--                    |\n")
 sleep(0.1)
 print(f" |/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\{green}- ENGLISH -{reset}/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\|\n")
 sleep(0.1)
-print(" ", " " *23 ,random.choice(pozdravy),"(Random Generated)\n")
+print(" ", " " *23 ,PickColor, random.choice(pozdravy), RESET,"(Random Generated)\n")
 print(f"{green}+{reset} ------------------------------------------------------------------------- {green}+{reset}\n")
 sleep(0.5)
 
@@ -194,7 +194,7 @@ while True:
         print(f"        {blue}+--------------------------------------------+{reset}")
         print("")
         print("")
-        sleep(2)
+        sleep(1)
         os.system("clear")
         exit()
 
