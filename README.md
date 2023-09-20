@@ -11,11 +11,23 @@ TYPE HELP or -h For show commands to use
 
 # [ INSTALLING ]
 
-1. git clone https://github.com/Fattcat/MXT
-2. cd MXT
-3. python3 installer.py
-4. sudo python3 stt-EN.py      (sudo is for start with NO ISSUES)
-5. (After Starting stt-EN.py   (Type : Yes ---> After Starting stt-EN.py)
+1.
+```
+git clone https://github.com/Fattcat/MXT
+```
+3.
+```
+cd MXT
+```
+5.
+```
+pip install requirements.txt
+```
+7.
+```
+sudo python3 stt.py      (sudo is for start with NO ISSUES)
+```
+9. (After Starting stt.py   (Type : Yes ---> After Starting stt-EN.py)
 
 # [ USING ]
 This Python tool can be sed for :
