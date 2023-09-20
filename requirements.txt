@@ -1,2 +1,8 @@
-pywifi
+os
+random
+keyboard
 subprocess
+signal
+playsound
+pywifi
+pygame
