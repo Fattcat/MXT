@@ -27,7 +27,7 @@ pip install requirements.txt
 ```
 sudo python3 stt.py
 ```
-9. (After Starting stt.py   (Type : Yes ---> After Starting stt-EN.py)
+9. Type : 'Yes' after starting
 
 # [ USING ]
 This Python tool can be sed for :
@@ -37,3 +37,4 @@ This Python tool can be sed for :
 4. WiFi Injection (Sniff photos, Credentials, searched or Downloaded)
 5. Creating Worm with WormCreator.py
 6. Sniff and Inject Cookies to browsers ...
+7. Much More by added soon ...
