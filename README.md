@@ -25,7 +25,7 @@ pip install requirements.txt
 ```
 7.
 ```
-sudo python3 stt.py      (sudo is for start with NO ISSUES)
+sudo python3 stt.py
 ```
 9. (After Starting stt.py   (Type : Yes ---> After Starting stt-EN.py)
 
