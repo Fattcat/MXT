@@ -4,7 +4,7 @@ Main App : stt-EN.py ( Date of Latest Update : 28.5.2023)
 Version : 1.0.0
 TYPE HELP or -h For show commands to use
 
-#                   [ ! DISCLAIMER ! ]
+# [ ! DISCLAIMER ! ]
 
 ! DON'T ABUSE THIS POWERFULL PYTHON SCRIPT !
 ! USE THIS ONLY ON YOUR OWN RISK OR IF YOU HAVE ALL PERMISSIONS !
